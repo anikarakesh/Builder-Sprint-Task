@@ -25,7 +25,7 @@ export default function BuilderProjectsPage() {
         <Section className="py-12">
           <div className="text-center">
             <h1 className="text-2xl font-bold text-red-600 mb-4">Error Loading Projects</h1>
-            <p className="text-[--color-neutral-600]">{error}</p>
+            <p className="text-[var(--color-neutral-600)]">{error}</p>
           </div>
         </Section>
       </Container>

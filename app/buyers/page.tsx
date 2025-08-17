@@ -51,7 +51,7 @@ export default function BuyersPage() {
         <Section className="py-12">
           <div className="text-center">
             <h1 className="text-2xl font-bold text-red-600 mb-4">Error Loading Properties</h1>
-            <p className="text-[--color-neutral-600]">{error}</p>
+            <p className="text-[var(--color-neutral-600)]">{error}</p>
           </div>
         </Section>
       </Container>
@@ -65,7 +65,7 @@ export default function BuyersPage() {
           <Heading level={1} size="3xl" className="mb-4">
             Find Your Dream Property
           </Heading>
-          <p className="text-xl text-[--color-neutral-600] mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-[var(--color-neutral-600)] mb-8 max-w-2xl mx-auto">
             Discover luxury apartments and premium homes from verified builders across India's top cities.
           </p>
           
@@ -99,7 +99,7 @@ export default function BuyersPage() {
                   : "All Properties"}
               </Heading>
               {!loading && (
-                <p className="text-[--color-neutral-600] mt-1">
+                <p className="text-[var(--color-neutral-600)] mt-1">
                   {filteredProjects.length} {filteredProjects.length === 1 ? "property" : "properties"} found
                 </p>
               )}
@@ -115,7 +115,7 @@ export default function BuyersPage() {
                   payload: { field, direction: direction as "asc" | "desc" }
                 });
               }}
-              className="px-3 py-2 border border-[--color-neutral-300] rounded-[var(--radius-md)] bg-[--color-bg-white-0] text-sm"
+              className="px-3 py-2 border border-[var(--color-neutral-300)] rounded-[var(--radius-md)] bg-[var(--color-bg-white-0)] text-sm"
             >
               <option value="title-asc">Name A-Z</option>
               <option value="title-desc">Name Z-A</option>

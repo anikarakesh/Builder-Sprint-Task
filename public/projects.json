@@ -23,20 +23,18 @@
       "category": "luxury",
       "propertyType": "apartment",
       "images": [
-        "/images/projects/skyline-towers/main.jpg",
-        "/images/projects/skyline-towers/lobby.jpg",
-        "/images/projects/skyline-towers/exterior.jpg",
-        "/images/projects/skyline-towers/amenities.jpg",
-        "/images/projects/skyline-towers/interior-1.jpg",
-        "/images/projects/skyline-towers/interior-2.jpg"
+        "https://images.pexels.com/photos/672916/pexels-photo-672916.jpeg",
+        "https://images.pexels.com/photos/3288103/pexels-photo-3288103.png",
+        "https://live.staticflickr.com/8395/8613475596_a5db4c3406.jpg",
+        "https://images.pexels.com/photos/1080696/pexels-photo-1080696.jpeg",
+        " https://images.pexels.com/photos/30871310/pexels-photo-30871310.jpeg"
       ],
       "thumbnails": [
-        "/images/projects/skyline-towers/thumb-main.jpg",
-        "/images/projects/skyline-towers/thumb-lobby.jpg",
-        "/images/projects/skyline-towers/thumb-exterior.jpg",
-        "/images/projects/skyline-towers/thumb-amenities.jpg",
-        "/images/projects/skyline-towers/thumb-interior-1.jpg",
-        "/images/projects/skyline-towers/thumb-interior-2.jpg"
+        "https://images.pexels.com/photos/672916/pexels-photo-672916.jpeg",
+        "https://images.pexels.com/photos/3288103/pexels-photo-3288103.png",
+        "https://live.staticflickr.com/8395/8613475596_a5db4c3406.jpg",
+        "https://images.pexels.com/photos/1080696/pexels-photo-1080696.jpeg",
+        " https://images.pexels.com/photos/30871310/pexels-photo-30871310.jpeg"
       ],
       "description": "Experience luxury living at its finest with Skyline Towers, featuring premium 2 and 3 BHK apartments with panoramic city views. Located in the heart of Bandra West, this development offers world-class amenities and connectivity.",
       "configurations": [
@@ -118,18 +116,18 @@
       "category": "premium",
       "propertyType": "apartment",
       "images": [
-        "/images/projects/green-valley/main.jpg",
-        "/images/projects/green-valley/garden.jpg",
-        "/images/projects/green-valley/clubhouse.jpg",
-        "/images/projects/green-valley/swimming-pool.jpg",
-        "/images/projects/green-valley/apartment.jpg"
+        "https://live.staticflickr.com/2499/3762675948_9a2d1c153d_b.jpg",
+        "https://live.staticflickr.com/3458/3889714660_098462175c_b.jpg",
+        "https://live.staticflickr.com/3531/3762674668_e7304c4bcd_b.jpg",
+        "https://live.staticflickr.com/3440/3761870901_953b1c54c9_b.jpg",
+        "https://live.staticflickr.com/2651/3762673930_aeee31cbe3_b.jpg"
       ],
       "thumbnails": [
-        "/images/projects/green-valley/thumb-main.jpg",
-        "/images/projects/green-valley/thumb-garden.jpg",
-        "/images/projects/green-valley/thumb-clubhouse.jpg",
-        "/images/projects/green-valley/thumb-swimming-pool.jpg",
-        "/images/projects/green-valley/thumb-apartment.jpg"
+        "https://live.staticflickr.com/2499/3762675948_9a2d1c153d_b.jpg",
+        "https://live.staticflickr.com/3458/3889714660_098462175c_b.jpg",
+        "https://live.staticflickr.com/3531/3762674668_e7304c4bcd_b.jpg",
+        "https://live.staticflickr.com/3440/3761870901_953b1c54c9_b.jpg",
+        "https://live.staticflickr.com/2651/3762673930_aeee31cbe3_b.jpg"
       ],
       "description": "Sustainable living meets modern comfort at Green Valley Homes. These eco-friendly apartments in Kharadi offer a perfect blend of nature and technology with energy-efficient designs and lush green spaces.",
       "configurations": [
@@ -138,21 +136,21 @@
           "area": 650,
           "price": 5525000,
           "available": 24,
-          "layout": "/images/projects/green-valley/layout-1bhk.jpg"
+          "layout": "https://images.pexels.com/photos/3288100/pexels-photo-3288100.png"
         },
         {
           "type": "2BHK",
           "area": 1000,
           "price": 8500000,
           "available": 18,
-          "layout": "/images/projects/green-valley/layout-2bhk.jpg"
+          "layout": "https://images.pexels.com/photos/3288100/pexels-photo-3288100.png"
         },
         {
           "type": "3BHK",
           "area": 1350,
           "price": 11475000,
           "available": 10,
-          "layout": "/images/projects/green-valley/layout-3bhk.jpg"
+          "layout": "https://images.pexels.com/photos/3288100/pexels-photo-3288100.png"
         }
       ],
       "amenities": [
@@ -218,18 +216,18 @@
       "category": "luxury",
       "propertyType": "apartment",
       "images": [
-        "/images/projects/royal-residency/main.jpg",
-        "/images/projects/royal-residency/entrance.jpg",
-        "/images/projects/royal-residency/amenities.jpg",
-        "/images/projects/royal-residency/terrace.jpg",
-        "/images/projects/royal-residency/living-room.jpg"
+        "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg",
+        "https://images.pexels.com/photos/3288103/pexels-photo-3288103.png",
+        "https://live.staticflickr.com/8395/8613475596_a5db4c3406.jpg",
+        "https://images.pexels.com/photos/1080696/pexels-photo-1080696.jpeg",
+        " https://images.pexels.com/photos/30871310/pexels-photo-30871310.jpeg"
       ],
       "thumbnails": [
-        "/images/projects/royal-residency/thumb-main.jpg",
-        "/images/projects/royal-residency/thumb-entrance.jpg",
-        "/images/projects/royal-residency/thumb-amenities.jpg",
-        "/images/projects/royal-residency/thumb-terrace.jpg",
-        "/images/projects/royal-residency/thumb-living-room.jpg"
+        "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg",
+        "https://images.pexels.com/photos/3288103/pexels-photo-3288103.png",
+        "https://live.staticflickr.com/8395/8613475596_a5db4c3406.jpg",
+        "https://images.pexels.com/photos/1080696/pexels-photo-1080696.jpeg",
+        " https://images.pexels.com/photos/30871310/pexels-photo-30871310.jpeg"
       ],
       "description": "Royal Residency offers sophisticated living in the heart of Whitefield's IT corridor. With premium finishes and state-of-the-art amenities, these residences cater to the modern professional lifestyle.",
       "configurations": [
@@ -238,21 +236,21 @@
           "area": 1100,
           "price": 13200000,
           "available": 15,
-          "layout": "/images/projects/royal-residency/layout-2bhk.jpg"
+          "layout": "https://images.pexels.com/photos/5178074/pexels-photo-5178074.jpeg"
         },
         {
           "type": "3BHK",
           "area": 1500,
           "price": 18000000,
           "available": 12,
-          "layout": "/images/projects/royal-residency/layout-3bhk.jpg"
+          "layout": "https://images.pexels.com/photos/5178074/pexels-photo-5178074.jpeg"
         },
         {
           "type": "4BHK",
           "area": 2000,
           "price": 24000000,
           "available": 5,
-          "layout": "/images/projects/royal-residency/layout-4bhk.jpg"
+          "layout": "https://images.pexels.com/photos/5178074/pexels-photo-5178074.jpeg"
         }
       ],
       "amenities": [
@@ -318,16 +316,16 @@
       "category": "premium",
       "propertyType": "apartment",
       "images": [
-        "/images/projects/serene-gardens/main.jpg",
-        "/images/projects/serene-gardens/landscape.jpg",
-        "/images/projects/serene-gardens/pool.jpg",
-        "/images/projects/serene-gardens/balcony.jpg"
+        "https://images.pexels.com/photos/1370704/pexels-photo-1370704.jpeg",
+        "https://images.pexels.com/photos/10115004/pexels-photo-10115004.jpeg",
+        "https://images.pexels.com/photos/261327/pexels-photo-261327.jpeg",
+        "https://images.pexels.com/photos/919278/pexels-photo-919278.jpeg"
       ],
       "thumbnails": [
-        "/images/projects/serene-gardens/thumb-main.jpg",
-        "/images/projects/serene-gardens/thumb-landscape.jpg",
-        "/images/projects/serene-gardens/thumb-pool.jpg",
-        "/images/projects/serene-gardens/thumb-balcony.jpg"
+        "https://images.pexels.com/photos/1370704/pexels-photo-1370704.jpeg",
+        "https://images.pexels.com/photos/10115004/pexels-photo-10115004.jpeg",
+        "https://images.pexels.com/photos/261327/pexels-photo-261327.jpeg",
+        "https://images.pexels.com/photos/919278/pexels-photo-919278.jpeg"
       ],
       "description": "Experience tranquility at Serene Gardens, where modern apartments are nestled within beautifully landscaped surroundings. Located on OMR, these homes offer easy access to IT hubs and recreational facilities.",
       "configurations": [
@@ -336,14 +334,14 @@
           "area": 1050,
           "price": 9975000,
           "available": 20,
-          "layout": "/images/projects/serene-gardens/layout-2bhk.jpg"
+          "layout": "https://images.pexels.com/photos/3288100/pexels-photo-3288100.png"
         },
         {
           "type": "3BHK",
           "area": 1400,
           "price": 13300000,
           "available": 14,
-          "layout": "/images/projects/serene-gardens/layout-3bhk.jpg"
+            "layout": "https://images.pexels.com/photos/3288100/pexels-photo-3288100.png"
         }
       ],
       "amenities": [
@@ -409,16 +407,18 @@
       "category": "luxury",
       "propertyType": "apartment",
       "images": [
-        "/images/projects/urban-heights/main.jpg",
-        "/images/projects/urban-heights/skyline.jpg",
-        "/images/projects/urban-heights/interior.jpg",
-        "/images/projects/urban-heights/facilities.jpg"
+        "https://images.pexels.com/photos/15940461/pexels-photo-15940461.jpeg",
+        "https://images.pexels.com/photos/3288103/pexels-photo-3288103.png",
+        "https://live.staticflickr.com/8395/8613475596_a5db4c3406.jpg",
+        "https://images.pexels.com/photos/1080696/pexels-photo-1080696.jpeg",
+        " https://images.pexels.com/photos/30871310/pexels-photo-30871310.jpeg"
       ],
       "thumbnails": [
-        "/images/projects/urban-heights/thumb-main.jpg",
-        "/images/projects/urban-heights/thumb-skyline.jpg",
-        "/images/projects/urban-heights/thumb-interior.jpg",
-        "/images/projects/urban-heights/thumb-facilities.jpg"
+        "https://images.pexels.com/photos/15940461/pexels-photo-15940461.jpeg",
+        "https://images.pexels.com/photos/3288103/pexels-photo-3288103.png",
+        "https://live.staticflickr.com/8395/8613475596_a5db4c3406.jpg",
+        "https://images.pexels.com/photos/1080696/pexels-photo-1080696.jpeg",
+        " https://images.pexels.com/photos/30871310/pexels-photo-30871310.jpeg"
       ],
       "description": "Urban Heights redefines city living with its contemporary design and premium amenities. Strategically located in Dwarka, these apartments offer excellent connectivity to the airport and business districts.",
       "configurations": [
@@ -500,14 +500,14 @@
       "category": "ultra-luxury",
       "propertyType": "apartment",
       "images": [
-        "/images/projects/golden-shores/main.jpg",
-        "/images/projects/golden-shores/beach-view.jpg",
-        "/images/projects/golden-shores/penthouse.jpg"
+        "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg",
+        "https://images.pexels.com/photos/3288103/pexels-photo-3288103.png",
+        "https://live.staticflickr.com/8395/8613475596_a5db4c3406.jpg"
       ],
       "thumbnails": [
-        "/images/projects/golden-shores/thumb-main.jpg",
-        "/images/projects/golden-shores/thumb-beach-view.jpg",
-        "/images/projects/golden-shores/thumb-penthouse.jpg"
+        "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg",
+        "https://images.pexels.com/photos/3288103/pexels-photo-3288103.png",
+        "https://live.staticflickr.com/8395/8613475596_a5db4c3406.jpg"
       ],
       "description": "Ultra-luxury beachfront living at Golden Shores. These exclusive residences offer unparalleled ocean views and world-class amenities, representing the pinnacle of luxury real estate in Mumbai.",
       "configurations": [
@@ -516,14 +516,14 @@
           "area": 2200,
           "price": 77000000,
           "available": 3,
-          "layout": "/images/projects/golden-shores/layout-3bhk.jpg"
+          "layout": "https://images.pexels.com/photos/3288100/pexels-photo-3288100.png"
         },
         {
           "type": "4BHK",
           "area": 3000,
           "price": 105000000,
           "available": 2,
-          "layout": "/images/projects/golden-shores/layout-4bhk.jpg"
+          "layout": "https://images.pexels.com/photos/3288100/pexels-photo-3288100.png"
         }
       ],
       "amenities": [

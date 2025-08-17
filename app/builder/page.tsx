@@ -86,7 +86,7 @@ export default function BuilderDashboardPage() {
   return (
     <Container>
       {/* Header */}
-      <Section className="py-8 border-b border-[--color-neutral-200]">
+      <Section className="py-8 border-b border-[var(--color-neutral-200)]">
         <div className="flex items-center justify-between">
           <div>
             <Heading level={1} size="2xl">Builder Dashboard</Heading>
@@ -201,7 +201,7 @@ export default function BuilderDashboardPage() {
             <Heading level={2} size="xl">Recently Added Projects</Heading>
             <a
               href="/builder/projects"
-              className="text-[--color-primary-base] hover:underline text-sm font-medium"
+              className="text-[var(--color-primary-base)] hover:underline text-sm font-medium"
             >
               View all projects →
             </a>
@@ -221,7 +221,7 @@ export default function BuilderDashboardPage() {
 
       {/* Quick Actions */}
       <Section className="py-8">
-        <div className="bg-[--color-bg-weak-50] rounded-[var(--radius-lg)] p-8 text-center">
+        <div className="bg-[var(--color-bg-weak-50)] rounded-[var(--radius-lg)] p-8 text-center">
           <Heading level={3} size="lg" className="mb-4">
             Quick Actions
           </Heading>
@@ -231,7 +231,7 @@ export default function BuilderDashboardPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/builder/projects"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[--color-primary-base] text-black rounded-[var(--radius-md)] hover:bg-[--color-primary-darker] transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[var(--color-primary-base)] text-black rounded-[var(--radius-md)] hover:bg-[var(--color-primary-darker)] transition-colors"
             >
               Manage Projects
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -240,7 +240,7 @@ export default function BuilderDashboardPage() {
             </a>
             <a
               href="/builder/projects"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-[--color-neutral-300] text-[--color-neutral-900] rounded-[var(--radius-md)] hover:bg-[--color-neutral-50] transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-[var(--color-neutral-300)] text-[var(--color-neutral-900)] rounded-[var(--radius-md)] hover:bg-[var(--color-neutral-50)] transition-colors"
             >
               Add New Project
             </a>

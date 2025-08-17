@@ -71,16 +71,16 @@ export default function BuilderProjectDetailPage({ params }: BuilderProjectDetai
       <Container>
         <Section className="py-8">
           <div className="animate-pulse space-y-8">
-            <div className="h-8 bg-[--color-neutral-200] rounded w-1/3" />
+            <div className="h-8 bg-[var(--color-neutral-200)] rounded w-1/3" />
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <div className="space-y-4">
-                <div className="h-6 bg-[--color-neutral-200] rounded" />
-                <div className="h-4 bg-[--color-neutral-200] rounded w-3/4" />
-                <div className="h-32 bg-[--color-neutral-200] rounded" />
+                <div className="h-6 bg-[var(--color-neutral-200)] rounded" />
+                <div className="h-4 bg-[var(--color-neutral-200)] rounded w-3/4" />
+                <div className="h-32 bg-[var(--color-neutral-200)] rounded" />
               </div>
               <div className="space-y-4">
-                <div className="h-32 bg-[--color-neutral-200] rounded" />
-                <div className="h-32 bg-[--color-neutral-200] rounded" />
+                <div className="h-32 bg-[var(--color-neutral-200)] rounded" />
+                <div className="h-32 bg-[var(--color-neutral-200)] rounded" />
               </div>
             </div>
           </div>
@@ -96,19 +96,19 @@ export default function BuilderProjectDetailPage({ params }: BuilderProjectDetai
   return (
     <Container>
       {/* Header */}
-      <Section className="py-6 border-b border-[--color-neutral-200]">
+      <Section className="py-6 border-b border-[var(--color-neutral-200)]">
         <div className="flex items-center justify-between">
           <div>
             <nav className="flex items-center space-x-2 text-sm mb-4">
-              <Link href="/builder" className="text-[--color-primary-base] hover:underline">
+              <Link href="/builder" className="text-[var(--color-primary-base)] hover:underline">
                 Dashboard
               </Link>
-              <span className="text-[--color-neutral-400]">/</span>
-              <Link href="/builder/projects" className="text-[--color-primary-base] hover:underline">
+              <span className="text-[var(--color-neutral-400)]">/</span>
+              <Link href="/builder/projects" className="text-[var(--color-primary-base)] hover:underline">
                 Projects
               </Link>
-              <span className="text-[--color-neutral-400]">/</span>
-              <span className="text-[--color-neutral-600]">{currentValues.title}</span>
+              <span className="text-[var(--color-neutral-400)]">/</span>
+              <span className="text-[var(--color-neutral-600)]">{currentValues.title}</span>
             </nav>
             
             <div className="flex items-center gap-4">
@@ -170,7 +170,7 @@ export default function BuilderProjectDetailPage({ params }: BuilderProjectDetai
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm font-medium text-[--color-neutral-900] mb-2">
+                  <label className="block text-sm font-medium text-[var(--color-neutral-900)] mb-2">
                     Project Title
                   </label>
                   {editMode ? (
@@ -185,7 +185,7 @@ export default function BuilderProjectDetailPage({ params }: BuilderProjectDetai
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium text-[--color-neutral-900] mb-2">
+                  <label className="block text-sm font-medium text-[var(--color-neutral-900)] mb-2">
                     Builder Name
                   </label>
                   {editMode ? (
@@ -200,7 +200,7 @@ export default function BuilderProjectDetailPage({ params }: BuilderProjectDetai
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium text-[--color-neutral-900] mb-2">
+                  <label className="block text-sm font-medium text-[var(--color-neutral-900)] mb-2">
                     City
                   </label>
                   {editMode ? (
@@ -215,7 +215,7 @@ export default function BuilderProjectDetailPage({ params }: BuilderProjectDetai
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium text-[--color-neutral-900] mb-2">
+                  <label className="block text-sm font-medium text-[var(--color-neutral-900)] mb-2">
                     Area
                   </label>
                   {editMode ? (
@@ -230,7 +230,7 @@ export default function BuilderProjectDetailPage({ params }: BuilderProjectDetai
                 </div>
                 
                 <div className="md:col-span-2">
-                  <label className="block text-sm font-medium text-[--color-neutral-900] mb-2">
+                  <label className="block text-sm font-medium text-[var(--color-neutral-900)] mb-2">
                     Status
                   </label>
                   {editMode ? (
@@ -259,7 +259,7 @@ export default function BuilderProjectDetailPage({ params }: BuilderProjectDetai
                   value={currentValues.description}
                   onChange={(e) => updateField("description", e.target.value)}
                   rows={6}
-                  className="w-full px-3 py-2 border border-[--color-neutral-300] rounded-[var(--radius-md)] focus:outline-none focus:ring-2 focus:ring-[--color-primary-alpha-16] resize-vertical"
+                  className="w-full px-3 py-2 border border-[var(--color-neutral-300)] rounded-[var(--radius-md)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary-alpha-16)] resize-vertical"
                   placeholder="Enter project description..."
                 />
               ) : (
@@ -273,7 +273,7 @@ export default function BuilderProjectDetailPage({ params }: BuilderProjectDetai
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm font-medium text-[--color-neutral-900] mb-2">
+                  <label className="block text-sm font-medium text-[var(--color-neutral-900)] mb-2">
                     Starting Price (₹)
                   </label>
                   {editMode ? (
@@ -294,7 +294,7 @@ export default function BuilderProjectDetailPage({ params }: BuilderProjectDetai
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium text-[--color-neutral-900] mb-2">
+                  <label className="block text-sm font-medium text-[var(--color-neutral-900)] mb-2">
                     Price per Sq Ft (₹)
                   </label>
                   {editMode ? (
@@ -320,7 +320,7 @@ export default function BuilderProjectDetailPage({ params }: BuilderProjectDetai
               
               <div className="space-y-4">
                 {currentValues.configurations.map((config, index) => (
-                  <div key={index} className="p-4 border border-[--color-neutral-200] rounded-[var(--radius-md)]">
+                  <div key={index} className="p-4 border border-[var(--color-neutral-200)] rounded-[var(--radius-md)]">
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                       <div>
                         <Text size="sm" color="muted">Type</Text>

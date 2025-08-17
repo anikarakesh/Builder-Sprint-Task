@@ -58,17 +58,17 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
       <Container>
         <Section className="py-8">
           <div className="animate-pulse">
-            <div className="h-8 bg-[--color-neutral-200] rounded w-1/3 mb-4" />
-            <div className="h-64 bg-[--color-neutral-200] rounded mb-6" />
+            <div className="h-8 bg-[var(--color-neutral-200)] rounded w-1/3 mb-4" />
+            <div className="h-64 bg-[var(--color-neutral-200)] rounded mb-6" />
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <div className="space-y-4">
-                <div className="h-6 bg-[--color-neutral-200] rounded w-3/4" />
-                <div className="h-4 bg-[--color-neutral-200] rounded w-full" />
-                <div className="h-4 bg-[--color-neutral-200] rounded w-2/3" />
+                <div className="h-6 bg-[var(--color-neutral-200)] rounded w-3/4" />
+                <div className="h-4 bg-[var(--color-neutral-200)] rounded w-full" />
+                <div className="h-4 bg-[var(--color-neutral-200)] rounded w-2/3" />
               </div>
               <div className="space-y-4">
-                <div className="h-32 bg-[--color-neutral-200] rounded" />
-                <div className="h-32 bg-[--color-neutral-200] rounded" />
+                <div className="h-32 bg-[var(--color-neutral-200)] rounded" />
+                <div className="h-32 bg-[var(--color-neutral-200)] rounded" />
               </div>
             </div>
           </div>
@@ -84,17 +84,17 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
   return (
     <Container>
         {/* Breadcrumb */}
-        <Section className="py-4 border-b border-[--color-neutral-200]">
+        <Section className="py-4 border-b border-[var(--color-neutral-200)]">
           <nav className="flex items-center space-x-2 text-sm">
-            <Link href="/buyers" className="text-[--color-primary-base] hover:underline">
+            <Link href="/buyers" className="text-[var(--color-primary-base)] hover:underline">
               Properties
             </Link>
-            <span className="text-[--color-neutral-400]">/</span>
-            <Link href={`/buyers?city=${project.location.city}`} className="text-[--color-primary-base] hover:underline">
+            <span className="text-[var(--color-neutral-400)]">/</span>
+            <Link href={`/buyers?city=${project.location.city}`} className="text-[var(--color-primary-base)] hover:underline">
               {project.location.city}
             </Link>
-            <span className="text-[--color-neutral-400]">/</span>
-            <span className="text-[--color-neutral-600]">{project.title}</span>
+            <span className="text-[var(--color-neutral-400)]">/</span>
+            <span className="text-[var(--color-neutral-600)]">{project.title}</span>
           </nav>
         </Section>
 
@@ -149,7 +149,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                         key={index}
                         onClick={() => setSelectedImageIndex(index)}
                         className={`relative w-20 h-20 rounded-[var(--radius-md)] overflow-hidden flex-shrink-0 ${
-                          selectedImageIndex === index ? "ring-2 ring-[--color-primary-base]" : ""
+                          selectedImageIndex === index ? "ring-2 ring-[var(--color-primary-base)]" : ""
                         }`}
                       >
                         <Image
@@ -167,7 +167,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
               {/* Project Description */}
               <div>
                 <Heading level={2} size="lg" className="mb-4">About This Project</Heading>
-                <Text className="text-[--color-neutral-700] leading-relaxed">
+                <Text className="text-[var(--color-neutral-700)] leading-relaxed">
                   {project.description}
                 </Text>
               </div>
@@ -194,7 +194,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                   </div>
                 </div>
                 
-                <div className="mt-4 pt-4 border-t border-[--color-neutral-200]">
+                <div className="mt-4 pt-4 border-t border-[var(--color-neutral-200)]">
                   <Text size="sm" color="muted" className="mb-2">Approvals</Text>
                   <div className="flex flex-wrap gap-2">
                     {project.specifications.approvals.map((approval) => (
@@ -211,7 +211,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                 <Heading level={3} size="md" className="mb-4">Amenities</Heading>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
                   {project.amenities.map((amenity) => (
-                    <div key={amenity} className="flex items-center gap-2 p-2 rounded bg-[--color-neutral-50]">
+                    <div key={amenity} className="flex items-center gap-2 p-2 rounded bg-[var(--color-neutral-50)]">
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-green-600 flex-shrink-0">
                         <polyline points="20,6 9,17 4,12"/>
                       </svg>
@@ -230,7 +230,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                     <div className="space-y-2">
                       {project.nearbyFacilities.map((facility, index) => (
                         <div key={index} className="flex items-center gap-2 text-sm">
-                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-[--color-primary-base] flex-shrink-0">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-[var(--color-primary-base)] flex-shrink-0">
                             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
                             <circle cx="12" cy="10" r="3"/>
                           </svg>
@@ -241,7 +241,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                   </div>
                   <div>
                     <Text weight="semibold" className="mb-3">Location Map</Text>
-                    <div className="h-48 bg-[--color-neutral-100] rounded-[var(--radius-md)] flex items-center justify-center">
+                    <div className="h-48 bg-[var(--color-neutral-100)] rounded-[var(--radius-md)] flex items-center justify-center">
                       <Text color="muted">Map view placeholder</Text>
                     </div>
                   </div>
@@ -257,7 +257,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                   <div>
                     <Heading level={1} size="xl" className="mb-1">{project.title}</Heading>
                     <Text color="secondary" className="mb-2">by {project.builder}</Text>
-                    <div className="flex items-center gap-2 text-sm text-[--color-neutral-600]">
+                    <div className="flex items-center gap-2 text-sm text-[var(--color-neutral-600)]">
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
                         <circle cx="12" cy="10" r="3"/>
@@ -339,7 +339,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                   </Button>
                 </div>
                 
-                <div className="mt-4 pt-4 border-t border-[--color-neutral-200] text-center">
+                <div className="mt-4 pt-4 border-t border-[var(--color-neutral-200)] text-center">
                   <Text size="sm" color="muted">
                     Interested? Get personalized assistance
                   </Text>
