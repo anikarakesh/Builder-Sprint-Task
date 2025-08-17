@@ -11,18 +11,20 @@ export interface BadgeProps {
   size?: BadgeSize;
   className?: string;
   icon?: ReactNode;
+  onClick?: React.MouseEventHandler<HTMLSpanElement>; // Add onClick prop
 }
 
-export function Badge({ 
-  children, 
-  variant = "default", 
-  size = "md", 
+export function Badge({
+  children,
+  variant = "default",
+  size = "md",
   className = "",
-  icon 
+  icon,
+  onClick // Destructure onClick prop
 }: BadgeProps) {
   const sizeClasses = {
     sm: "px-2 py-0.5 text-xs h-5",
-    md: "px-2.5 py-1 text-xs h-6", 
+    md: "px-2.5 py-1 text-xs h-6",
     lg: "px-3 py-1.5 text-sm h-8"
   };
 
@@ -30,7 +32,7 @@ export function Badge({
     default: "bg-[--color-neutral-100] text-[--color-neutral-700] border-[--color-neutral-200]",
     primary: "bg-[--color-primary-alpha-10] text-[--color-primary-base] border-[--color-primary-alpha-16]",
     success: "bg-green-50 text-green-700 border-green-200",
-    warning: "bg-yellow-50 text-yellow-700 border-yellow-200", 
+    warning: "bg-yellow-50 text-yellow-700 border-yellow-200",
     error: "bg-red-50 text-red-700 border-red-200",
     outline: "bg-transparent text-[--color-neutral-700] border-[--color-neutral-300]"
   };
@@ -43,7 +45,7 @@ export function Badge({
   ].filter(Boolean).join(" ");
 
   return (
-    <span className={badgeClasses}>
+    <span className={badgeClasses} onClick={onClick}> {/* Pass onClick to the span */}
       {icon && (
         <span className="inline-flex items-center" aria-hidden>
           {icon}
@@ -62,7 +64,7 @@ export function StatusBadge({ status, ...props }: { status: "active" | "inactive
   };
 
   const config = statusConfig[status];
-  
+
   return (
     <Badge variant={config.variant} {...props}>
       {config.label}

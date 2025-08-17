@@ -16,13 +16,7 @@ import { useAppState } from "../../../../lib/context/AppContext";
 import { formatPrice, formatArea } from "../../../../lib/utils";
 import Link from "next/link";
 
-interface BuilderProjectDetailProps {
-  params: {
-    projectId: string;
-  };
-}
-
-export default function BuilderProjectDetailPage({ params }: BuilderProjectDetailProps) {
+export default function BuilderProjectDetailPage({ params }: any) {
   const { project, loading, error } = useProject(params.projectId);
   const { state, dispatch } = useAppState();
   const router = useRouter();

@@ -8,7 +8,7 @@ import { Heading, Text } from "../primitives/Typography";
 import { Select } from "../primitives/Select";
 import { useAppState } from "../../lib/context/AppContext";
 import { sortProjects, filterProjects, formatPrice, formatNumber, formatPercent } from "../../lib/utils";
-import type { Project, SortConfig } from "../../lib/utils";
+import type { Project } from "../../lib/utils";
 
 export interface ProjectsTableProps {
   projects: Project[];

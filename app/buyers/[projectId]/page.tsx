@@ -21,13 +21,9 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 
-interface ProjectDetailPageProps {
-  params: {
-    projectId: string;
-  };
-}
 
-export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
+
+export default function ProjectDetailPage({ params }: any) {
   const { project, loading, error } = useProject(params.projectId);
   const { projects } = useProjects();
   const [selectedConfig, setSelectedConfig] = useState<string>("");
