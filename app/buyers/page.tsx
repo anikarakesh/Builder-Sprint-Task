@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { Container } from "../../components/layout/Container";
 import { Section } from "../../components/layout/Section";
@@ -21,7 +21,7 @@ import {
   getUniqueConfigurations
 } from "../../lib/utils";
 
-export default function BuyersPage() {
+function BuyersPageContent() {
   const { projects, cities, priceRanges, loading, error } = useProjects();
   const { state, dispatch } = useAppState();
   const searchParams = useSearchParams();
@@ -337,5 +337,27 @@ export default function BuyersPage() {
         </div>
       )}
     </div>
+  );
+}
+
+// Loading component for Suspense fallback
+function BuyersPageLoading() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50/30 flex items-center justify-center">
+      <Container>
+        <div className="text-center">
+          <div className="w-16 h-16 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+          <Text className="text-slate-600">Loading property listings...</Text>
+        </div>
+      </Container>
+    </div>
+  );
+}
+
+export default function BuyersPage() {
+  return (
+    <Suspense fallback={<BuyersPageLoading />}>
+      <BuyersPageContent />
+    </Suspense>
   );
 }
