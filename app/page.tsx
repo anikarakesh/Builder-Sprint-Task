@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
 import { Button } from "@/components/primitives/Button";
@@ -13,14 +14,21 @@ import { useProjects } from "@/lib/hooks/useProjects";
 export default function Home() {
   const { projects, loading } = useProjects();
   const [searchQuery, setSearchQuery] = useState("");
+  const router = useRouter();
 
   const featuredProjects = projects.filter(p => p.featured && p.status === "active");
   const popularProjects = projects.filter(p => p.popular && p.status === "active");
 
   const handleSearch = (query: string) => {
-    setSearchQuery(query);
-    // In a real app, this would trigger navigation to search results
-    console.log("Searching for:", query);
+    if (query.trim()) {
+      // Navigate to buyers page with search query
+      const searchParams = new URLSearchParams();
+      searchParams.set('search', query.trim());
+      router.push(`/buyers?${searchParams.toString()}`);
+    } else {
+      // If empty search, just go to buyers page
+      router.push('/buyers');
+    }
   };
 
   const stats = [
@@ -89,9 +97,7 @@ export default function Home() {
                       onSearch={handleSearch}
                       className="border-0 shadow-none text-lg py-2 bg-transparent placeholder-slate-500 text-slate-800 flex-1"
                     />
-                    <button className="flex-shrink-0 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-2xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-                      Search
-                    </button>
+
                   </div>
                 </div>
               </div>

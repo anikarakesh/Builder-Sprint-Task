@@ -1,15 +1,21 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useState, useEffect, type FormEvent } from "react";
 
 export type SearchBarProps = {
   placeholder?: string;
   onSearch?: (query: string) => void;
   className?: string;
+  initialValue?: string;
 };
 
-export function SearchBar({ placeholder = "Search...", onSearch, className = "" }: SearchBarProps) {
-  const [value, setValue] = useState("");
+export function SearchBar({ placeholder = "Search...", onSearch, className = "", initialValue = "" }: SearchBarProps) {
+  const [value, setValue] = useState(initialValue);
+  
+  // Update local state when initialValue changes
+  useEffect(() => {
+    setValue(initialValue);
+  }, [initialValue]);
 
   function handleSubmit(event: FormEvent) {
     event.preventDefault();
@@ -29,7 +35,7 @@ export function SearchBar({ placeholder = "Search...", onSearch, className = "" 
       />
       <button
         type="submit"
-        className="h-10 px-3 rounded-[var(--radius-md)] bg-[--color-primary-base] text-[--color-static-white] text-sm hover:bg-[color:rgb(59_130_246_/_.9)] focus:outline-none focus:ring-2 focus:ring-[--color-primary-alpha-16]"
+        className="flex-shrink-0 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-2xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
         aria-label="Search for properties"
       >
         Search

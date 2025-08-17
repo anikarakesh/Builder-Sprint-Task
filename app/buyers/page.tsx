@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useMemo } from "react";
+import { useSearchParams } from "next/navigation";
 import { Container } from "../../components/layout/Container";
 import { Section } from "../../components/layout/Section";
 import { Heading, Text } from "../../components/primitives/Typography";
@@ -23,6 +24,15 @@ import {
 export default function BuyersPage() {
   const { projects, cities, priceRanges, loading, error } = useProjects();
   const { state, dispatch } = useAppState();
+  const searchParams = useSearchParams();
+  
+  // Handle URL search parameters
+  useEffect(() => {
+    const searchQuery = searchParams.get('search');
+    if (searchQuery) {
+      dispatch({ type: "SET_SEARCH_QUERY", payload: searchQuery });
+    }
+  }, [searchParams, dispatch]);
   
   // Extract filter data
   const uniqueCities = useMemo(() => getUniqueCities(projects), [projects]);
@@ -145,11 +155,10 @@ export default function BuyersPage() {
                     <SearchBar
                       placeholder="Search by location, builder, property name, or amenities..."
                       onSearch={handleSearch}
+                      initialValue={state.searchQuery}
                       className="border-0 shadow-none text-lg py-2 bg-transparent placeholder-slate-500 text-slate-800 flex-1"
                     />
-                    <button className="flex-shrink-0 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-2xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-                      Search
-                    </button>
+ 
                   </div>
                 </div>
               </div>
