@@ -1,0 +1,65 @@
+Builder Sprint Task
+Objective: Deliver a pixel-perfect, component-driven, and AI-augmented frontend for a
+high-priority module of our real estate platform.
+This sprint tests not just how you ship UI — but how you think, leverage AI tools, and build
+with intent under tight constraints. We expect to complete the assigned module within the
+estimated time window (4–6 hours max). We want to observe how you actively leverage AI
+to increase velocity and quality. Please log your usage briefly in the README.
+
+Project Overview
+You are tasked with developing a key module of a real estate management platform. This
+platform enables the internal team to onboard verified builders, manage property listings,
+handle buyer leads, and monitor platform performance.
+The goal of this task is to assess your ability to:
+● Translate Figma designs into high-fidelity, accessible UI
+● Build with modularity, scalability, and performance in mind
+● Identify opportunities to use AI tools to accelerate development
+● Make clear decisions, fast — and document them where relevant
+
+Module Overview
+1. Buyer Module
+A public-facing property search and viewing experience for buyers.
+Includes:
+Project Listing Page
+
+○ Prominent search bar with location and property type filters
+○ Grid layout of property cards showing images, location, price, and key details
+○ Sections for “Popular Properties” in multiple cities
+○ Responsive layout for desktop and mobile
+
+Project Description Page
+
+○ Large image gallery with thumbnails
+○ Project title, location, price, and quick action buttons
+
+○ Filterable property configuration buttons (e.g., 1BHK, 2BHK, 3BHK)
+○ “Explore Neighbourhood” section with amenities list and map view
+○ Additional “Popular Properties” section for related listings
+Goal: Enable buyers to easily discover, filter, and explore property listings with
+clear visuals, intuitive navigation, and quick access to details.
+
+2. Builder Dashboard
+A private workspace for builders to manage projects, media assets, and buyer leads.
+Includes:
+Dashboard Overview
+
+○ Key performance metrics (views, leads, CTRs) with line graphs
+○ Snapshot cards for important stats
+○ Recently added project previews
+
+Projects Table
+
+○ List view with sortable columns (project name, location, leads, status)
+○ Status indicators for active/inactive projects
+○ Quick action buttons for editing or viewing project details
+
+Project Detail View
+
+○ Editable fields for project description, pricing, and media
+○ Image gallery management (upload, reorder, delete)
+○ Detailed specs and amenities list
+Goal: Give builders a simple yet powerful interface to monitor performance,
+update listings, and manage incoming buyer interest.
+
+Task Scope
+We expect to build the following screens under the estimated duration:
