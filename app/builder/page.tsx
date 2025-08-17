@@ -231,7 +231,7 @@ export default function BuilderDashboardPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/builder/projects"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[--color-primary-base] text-white rounded-[var(--radius-md)] hover:bg-[--color-primary-darker] transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[--color-primary-base] text-black rounded-[var(--radius-md)] hover:bg-[--color-primary-darker] transition-colors"
             >
               Manage Projects
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
