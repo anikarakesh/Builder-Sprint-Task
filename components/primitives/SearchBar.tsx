@@ -25,10 +25,12 @@ export function SearchBar({ placeholder = "Search...", onSearch, className = "" 
         placeholder={placeholder}
         aria-label={placeholder}
         className="w-full h-10 px-3 rounded-[var(--radius-md)] border border-[--color-neutral-300] bg-[--color-bg-white-0] text-[--color-neutral-900] placeholder-[--color-neutral-500] focus:outline-none focus:ring-2 focus:ring-[--color-primary-alpha-16]"
+        role="searchbox"
       />
       <button
         type="submit"
-        className="h-10 px-3 rounded-[var(--radius-md)] bg-[--color-primary-base] text-[--color-static-white] text-sm hover:bg-[color:rgb(59_130_246_/_.9)]"
+        className="h-10 px-3 rounded-[var(--radius-md)] bg-[--color-primary-base] text-[--color-static-white] text-sm hover:bg-[color:rgb(59_130_246_/_.9)] focus:outline-none focus:ring-2 focus:ring-[--color-primary-alpha-16]"
+        aria-label="Search for properties"
       >
         Search
       </button>

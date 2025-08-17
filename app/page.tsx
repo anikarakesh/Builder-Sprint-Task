@@ -63,7 +63,7 @@ export default function Home() {
                   </svg>
                 </Button>
               </Link>
-              <Link href="/builders">
+              <Link href="/builder">
                 <Button variant="outline" color="blue" className="text-base px-8 h-12">
                   List Your Property
                 </Button>
@@ -180,7 +180,7 @@ export default function Home() {
                   Start Property Search
                 </Button>
               </Link>
-              <Link href="/builders">
+              <Link href="/builder">
                 <Button variant="outline" className="text-base px-8 h-12 border-white text-white hover:bg-white/10">
                   Partner With Us
                 </Button>
