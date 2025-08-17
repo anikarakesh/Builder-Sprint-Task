@@ -1,0 +1,718 @@
+{
+  "projects": [
+    {
+      "id": "skyline-towers",
+      "title": "Skyline Towers",
+      "builder": "Premium Constructions",
+      "builderId": "builder-001",
+      "location": {
+        "city": "Mumbai",
+        "area": "Bandra West",
+        "address": "Plot No. 45, Linking Road, Bandra West, Mumbai 400050",
+        "coordinates": {
+          "lat": 19.0544,
+          "lng": 72.8293
+        }
+      },
+      "price": {
+        "starting": 15000000,
+        "currency": "INR",
+        "pricePerSqft": 25000
+      },
+      "status": "active",
+      "category": "luxury",
+      "propertyType": "apartment",
+      "images": [
+        "/images/projects/skyline-towers/main.jpg",
+        "/images/projects/skyline-towers/lobby.jpg",
+        "/images/projects/skyline-towers/exterior.jpg",
+        "/images/projects/skyline-towers/amenities.jpg",
+        "/images/projects/skyline-towers/interior-1.jpg",
+        "/images/projects/skyline-towers/interior-2.jpg"
+      ],
+      "thumbnails": [
+        "/images/projects/skyline-towers/thumb-main.jpg",
+        "/images/projects/skyline-towers/thumb-lobby.jpg",
+        "/images/projects/skyline-towers/thumb-exterior.jpg",
+        "/images/projects/skyline-towers/thumb-amenities.jpg",
+        "/images/projects/skyline-towers/thumb-interior-1.jpg",
+        "/images/projects/skyline-towers/thumb-interior-2.jpg"
+      ],
+      "description": "Experience luxury living at its finest with Skyline Towers, featuring premium 2 and 3 BHK apartments with panoramic city views. Located in the heart of Bandra West, this development offers world-class amenities and connectivity.",
+      "configurations": [
+        {
+          "type": "2BHK",
+          "area": 850,
+          "price": 21250000,
+          "available": 12,
+          "layout": "/images/projects/skyline-towers/layout-2bhk.jpg"
+        },
+        {
+          "type": "3BHK",
+          "area": 1200,
+          "price": 30000000,
+          "available": 8,
+          "layout": "/images/projects/skyline-towers/layout-3bhk.jpg"
+        }
+      ],
+      "amenities": [
+        "Swimming Pool",
+        "Gymnasium",
+        "Children's Play Area",
+        "Landscaped Gardens",
+        "24/7 Security",
+        "Power Backup",
+        "Parking",
+        "Clubhouse",
+        "Jogging Track",
+        "Spa & Wellness Center",
+        "Business Center",
+        "Concierge Services"
+      ],
+      "specifications": {
+        "floors": 25,
+        "totalUnits": 120,
+        "possession": "2025-12",
+        "approvals": ["RERA", "Environmental Clearance", "Fire NOC"],
+        "constructionStatus": "Under Construction - 60% Complete"
+      },
+      "metrics": {
+        "views": 15420,
+        "leads": 342,
+        "ctr": 2.22,
+        "inquiries": 28,
+        "siteVisits": 156
+      },
+      "nearbyFacilities": [
+        "Bandra Railway Station - 0.8 km",
+        "Lilavati Hospital - 1.2 km",
+        "Hill Road Shopping - 0.5 km",
+        "American School - 1.5 km",
+        "Bandstand Promenade - 1.8 km"
+      ],
+      "createdAt": "2024-01-15T10:30:00Z",
+      "updatedAt": "2024-01-20T14:45:00Z",
+      "featured": true,
+      "popular": true
+    },
+    {
+      "id": "green-valley-homes",
+      "title": "Green Valley Homes",
+      "builder": "EcoSpace Developers",
+      "builderId": "builder-002",
+      "location": {
+        "city": "Pune",
+        "area": "Kharadi",
+        "address": "Survey No. 123, Kharadi, Pune 411014",
+        "coordinates": {
+          "lat": 18.5505,
+          "lng": 73.9370
+        }
+      },
+      "price": {
+        "starting": 8500000,
+        "currency": "INR",
+        "pricePerSqft": 8500
+      },
+      "status": "active",
+      "category": "premium",
+      "propertyType": "apartment",
+      "images": [
+        "/images/projects/green-valley/main.jpg",
+        "/images/projects/green-valley/garden.jpg",
+        "/images/projects/green-valley/clubhouse.jpg",
+        "/images/projects/green-valley/swimming-pool.jpg",
+        "/images/projects/green-valley/apartment.jpg"
+      ],
+      "thumbnails": [
+        "/images/projects/green-valley/thumb-main.jpg",
+        "/images/projects/green-valley/thumb-garden.jpg",
+        "/images/projects/green-valley/thumb-clubhouse.jpg",
+        "/images/projects/green-valley/thumb-swimming-pool.jpg",
+        "/images/projects/green-valley/thumb-apartment.jpg"
+      ],
+      "description": "Sustainable living meets modern comfort at Green Valley Homes. These eco-friendly apartments in Kharadi offer a perfect blend of nature and technology with energy-efficient designs and lush green spaces.",
+      "configurations": [
+        {
+          "type": "1BHK",
+          "area": 650,
+          "price": 5525000,
+          "available": 24,
+          "layout": "/images/projects/green-valley/layout-1bhk.jpg"
+        },
+        {
+          "type": "2BHK",
+          "area": 1000,
+          "price": 8500000,
+          "available": 18,
+          "layout": "/images/projects/green-valley/layout-2bhk.jpg"
+        },
+        {
+          "type": "3BHK",
+          "area": 1350,
+          "price": 11475000,
+          "available": 10,
+          "layout": "/images/projects/green-valley/layout-3bhk.jpg"
+        }
+      ],
+      "amenities": [
+        "Eco-friendly Design",
+        "Rainwater Harvesting",
+        "Solar Panels",
+        "Organic Garden",
+        "Cycling Track",
+        "Open Air Theater",
+        "Meditation Center",
+        "Library",
+        "Café",
+        "Pet Park",
+        "EV Charging Stations",
+        "Waste Management System"
+      ],
+      "specifications": {
+        "floors": 15,
+        "totalUnits": 180,
+        "possession": "2025-08",
+        "approvals": ["RERA", "Green Building Certification", "Pollution Control"],
+        "constructionStatus": "Under Construction - 75% Complete"
+      },
+      "metrics": {
+        "views": 12890,
+        "leads": 278,
+        "ctr": 2.16,
+        "inquiries": 35,
+        "siteVisits": 123
+      },
+      "nearbyFacilities": [
+        "Kharadi IT Park - 2.0 km",
+        "Phoenix Mall - 3.5 km",
+        "Eon IT Park - 1.8 km",
+        "International School - 2.2 km",
+        "Pune Airport - 8.5 km"
+      ],
+      "createdAt": "2024-01-10T09:15:00Z",
+      "updatedAt": "2024-01-22T11:20:00Z",
+      "featured": true,
+      "popular": true
+    },
+    {
+      "id": "royal-residency",
+      "title": "Royal Residency",
+      "builder": "Crown Builders",
+      "builderId": "builder-003",
+      "location": {
+        "city": "Bangalore",
+        "area": "Whitefield",
+        "address": "ITPL Main Road, Whitefield, Bangalore 560066",
+        "coordinates": {
+          "lat": 12.9698,
+          "lng": 77.7500
+        }
+      },
+      "price": {
+        "starting": 12000000,
+        "currency": "INR",
+        "pricePerSqft": 12000
+      },
+      "status": "active",
+      "category": "luxury",
+      "propertyType": "apartment",
+      "images": [
+        "/images/projects/royal-residency/main.jpg",
+        "/images/projects/royal-residency/entrance.jpg",
+        "/images/projects/royal-residency/amenities.jpg",
+        "/images/projects/royal-residency/terrace.jpg",
+        "/images/projects/royal-residency/living-room.jpg"
+      ],
+      "thumbnails": [
+        "/images/projects/royal-residency/thumb-main.jpg",
+        "/images/projects/royal-residency/thumb-entrance.jpg",
+        "/images/projects/royal-residency/thumb-amenities.jpg",
+        "/images/projects/royal-residency/thumb-terrace.jpg",
+        "/images/projects/royal-residency/thumb-living-room.jpg"
+      ],
+      "description": "Royal Residency offers sophisticated living in the heart of Whitefield's IT corridor. With premium finishes and state-of-the-art amenities, these residences cater to the modern professional lifestyle.",
+      "configurations": [
+        {
+          "type": "2BHK",
+          "area": 1100,
+          "price": 13200000,
+          "available": 15,
+          "layout": "/images/projects/royal-residency/layout-2bhk.jpg"
+        },
+        {
+          "type": "3BHK",
+          "area": 1500,
+          "price": 18000000,
+          "available": 12,
+          "layout": "/images/projects/royal-residency/layout-3bhk.jpg"
+        },
+        {
+          "type": "4BHK",
+          "area": 2000,
+          "price": 24000000,
+          "available": 5,
+          "layout": "/images/projects/royal-residency/layout-4bhk.jpg"
+        }
+      ],
+      "amenities": [
+        "Infinity Pool",
+        "High-tech Gym",
+        "Rooftop Garden",
+        "Multi-purpose Hall",
+        "Indoor Games Room",
+        "Mini Theater",
+        "Co-working Space",
+        "High-speed Elevators",
+        "Valet Parking",
+        "Tennis Court",
+        "Squash Court",
+        "Yoga Studio"
+      ],
+      "specifications": {
+        "floors": 30,
+        "totalUnits": 200,
+        "possession": "2026-03",
+        "approvals": ["RERA", "BDA", "BESCOM", "BWSSB"],
+        "constructionStatus": "Under Construction - 45% Complete"
+      },
+      "metrics": {
+        "views": 18750,
+        "leads": 425,
+        "ctr": 2.27,
+        "inquiries": 52,
+        "siteVisits": 198
+      },
+      "nearbyFacilities": [
+        "ITPL - 1.0 km",
+        "Brigade Gateway Mall - 2.5 km",
+        "Columbia Asia Hospital - 1.8 km",
+        "Ryan International School - 2.0 km",
+        "Whitefield Metro Station - 3.2 km"
+      ],
+      "createdAt": "2024-01-08T16:45:00Z",
+      "updatedAt": "2024-01-21T09:30:00Z",
+      "featured": false,
+      "popular": true
+    },
+    {
+      "id": "serene-gardens",
+      "title": "Serene Gardens",
+      "builder": "Nature Homes",
+      "builderId": "builder-004",
+      "location": {
+        "city": "Chennai",
+        "area": "OMR",
+        "address": "Old Mahabalipuram Road, Thoraipakkam, Chennai 600097",
+        "coordinates": {
+          "lat": 12.9410,
+          "lng": 80.2329
+        }
+      },
+      "price": {
+        "starting": 9500000,
+        "currency": "INR",
+        "pricePerSqft": 9500
+      },
+      "status": "active",
+      "category": "premium",
+      "propertyType": "apartment",
+      "images": [
+        "/images/projects/serene-gardens/main.jpg",
+        "/images/projects/serene-gardens/landscape.jpg",
+        "/images/projects/serene-gardens/pool.jpg",
+        "/images/projects/serene-gardens/balcony.jpg"
+      ],
+      "thumbnails": [
+        "/images/projects/serene-gardens/thumb-main.jpg",
+        "/images/projects/serene-gardens/thumb-landscape.jpg",
+        "/images/projects/serene-gardens/thumb-pool.jpg",
+        "/images/projects/serene-gardens/thumb-balcony.jpg"
+      ],
+      "description": "Experience tranquility at Serene Gardens, where modern apartments are nestled within beautifully landscaped surroundings. Located on OMR, these homes offer easy access to IT hubs and recreational facilities.",
+      "configurations": [
+        {
+          "type": "2BHK",
+          "area": 1050,
+          "price": 9975000,
+          "available": 20,
+          "layout": "/images/projects/serene-gardens/layout-2bhk.jpg"
+        },
+        {
+          "type": "3BHK",
+          "area": 1400,
+          "price": 13300000,
+          "available": 14,
+          "layout": "/images/projects/serene-gardens/layout-3bhk.jpg"
+        }
+      ],
+      "amenities": [
+        "Botanical Garden",
+        "Water Features",
+        "Walking Trails",
+        "Outdoor Fitness",
+        "Children's Adventure Park",
+        "Amphitheater",
+        "Reflexology Path",
+        "Bird Watching Area",
+        "Herb Garden",
+        "Picnic Areas",
+        "Reading Corners",
+        "Art Gallery"
+      ],
+      "specifications": {
+        "floors": 18,
+        "totalUnits": 150,
+        "possession": "2025-10",
+        "approvals": ["RERA", "DTCP", "Fire Safety", "Environmental"],
+        "constructionStatus": "Under Construction - 65% Complete"
+      },
+      "metrics": {
+        "views": 11200,
+        "leads": 198,
+        "ctr": 1.77,
+        "inquiries": 23,
+        "siteVisits": 87
+      },
+      "nearbyFacilities": [
+        "IT Corridor - 1.5 km",
+        "Phoenix MarketCity - 4.0 km",
+        "Apollo Hospital - 2.8 km",
+        "PSBB School - 2.2 km",
+        "Muttukadu Boat House - 8.0 km"
+      ],
+      "createdAt": "2024-01-12T12:00:00Z",
+      "updatedAt": "2024-01-19T15:15:00Z",
+      "featured": true,
+      "popular": false
+    },
+    {
+      "id": "urban-heights",
+      "title": "Urban Heights",
+      "builder": "Metro Constructions",
+      "builderId": "builder-005",
+      "location": {
+        "city": "Delhi",
+        "area": "Dwarka",
+        "address": "Sector 12, Dwarka, New Delhi 110078",
+        "coordinates": {
+          "lat": 28.5921,
+          "lng": 77.0460
+        }
+      },
+      "price": {
+        "starting": 13500000,
+        "currency": "INR",
+        "pricePerSqft": 13500
+      },
+      "status": "active",
+      "category": "luxury",
+      "propertyType": "apartment",
+      "images": [
+        "/images/projects/urban-heights/main.jpg",
+        "/images/projects/urban-heights/skyline.jpg",
+        "/images/projects/urban-heights/interior.jpg",
+        "/images/projects/urban-heights/facilities.jpg"
+      ],
+      "thumbnails": [
+        "/images/projects/urban-heights/thumb-main.jpg",
+        "/images/projects/urban-heights/thumb-skyline.jpg",
+        "/images/projects/urban-heights/thumb-interior.jpg",
+        "/images/projects/urban-heights/thumb-facilities.jpg"
+      ],
+      "description": "Urban Heights redefines city living with its contemporary design and premium amenities. Strategically located in Dwarka, these apartments offer excellent connectivity to the airport and business districts.",
+      "configurations": [
+        {
+          "type": "2BHK",
+          "area": 1000,
+          "price": 13500000,
+          "available": 16,
+          "layout": "/images/projects/urban-heights/layout-2bhk.jpg"
+        },
+        {
+          "type": "3BHK",
+          "area": 1350,
+          "price": 18225000,
+          "available": 11,
+          "layout": "/images/projects/urban-heights/layout-3bhk.jpg"
+        }
+      ],
+      "amenities": [
+        "Sky Lounge",
+        "Temperature Controlled Pool",
+        "Automated Parking",
+        "Smart Home Features",
+        "Concierge Desk",
+        "Business Lounge",
+        "Banquet Hall",
+        "Guest Suites",
+        "Grocery Store",
+        "ATM",
+        "Pharmacy",
+        "Laundry Service"
+      ],
+      "specifications": {
+        "floors": 35,
+        "totalUnits": 210,
+        "possession": "2026-06",
+        "approvals": ["RERA", "DDA", "Fire Department", "Pollution Board"],
+        "constructionStatus": "Under Construction - 40% Complete"
+      },
+      "metrics": {
+        "views": 16890,
+        "leads": 387,
+        "ctr": 2.29,
+        "inquiries": 41,
+        "siteVisits": 167
+      },
+      "nearbyFacilities": [
+        "IGI Airport - 8.0 km",
+        "City Centre Mall - 2.5 km",
+        "Dwarka Metro Station - 1.2 km",
+        "DPS School - 1.8 km",
+        "Venkateshwar Hospital - 3.0 km"
+      ],
+      "createdAt": "2024-01-05T14:20:00Z",
+      "updatedAt": "2024-01-20T16:45:00Z",
+      "featured": true,
+      "popular": true
+    },
+    {
+      "id": "golden-shores",
+      "title": "Golden Shores",
+      "builder": "Coastal Developers",
+      "builderId": "builder-006",
+      "location": {
+        "city": "Mumbai",
+        "area": "Juhu",
+        "address": "Juhu Tara Road, Juhu, Mumbai 400049",
+        "coordinates": {
+          "lat": 19.0990,
+          "lng": 72.8265
+        }
+      },
+      "price": {
+        "starting": 25000000,
+        "currency": "INR",
+        "pricePerSqft": 35000
+      },
+      "status": "inactive",
+      "category": "ultra-luxury",
+      "propertyType": "apartment",
+      "images": [
+        "/images/projects/golden-shores/main.jpg",
+        "/images/projects/golden-shores/beach-view.jpg",
+        "/images/projects/golden-shores/penthouse.jpg"
+      ],
+      "thumbnails": [
+        "/images/projects/golden-shores/thumb-main.jpg",
+        "/images/projects/golden-shores/thumb-beach-view.jpg",
+        "/images/projects/golden-shores/thumb-penthouse.jpg"
+      ],
+      "description": "Ultra-luxury beachfront living at Golden Shores. These exclusive residences offer unparalleled ocean views and world-class amenities, representing the pinnacle of luxury real estate in Mumbai.",
+      "configurations": [
+        {
+          "type": "3BHK",
+          "area": 2200,
+          "price": 77000000,
+          "available": 3,
+          "layout": "/images/projects/golden-shores/layout-3bhk.jpg"
+        },
+        {
+          "type": "4BHK",
+          "area": 3000,
+          "price": 105000000,
+          "available": 2,
+          "layout": "/images/projects/golden-shores/layout-4bhk.jpg"
+        }
+      ],
+      "amenities": [
+        "Private Beach Access",
+        "Yacht Club",
+        "Wine Cellar",
+        "Butler Service",
+        "Private Cinema",
+        "Helipad",
+        "Spa Suite",
+        "Infinity Pool",
+        "Private Cabanas",
+        "Gourmet Restaurant",
+        "Art Gallery",
+        "Cigar Lounge"
+      ],
+      "specifications": {
+        "floors": 20,
+        "totalUnits": 40,
+        "possession": "2025-12",
+        "approvals": ["RERA", "Coastal Regulatory Zone", "Environment"],
+        "constructionStatus": "Completed - Ready for Possession"
+      },
+      "metrics": {
+        "views": 8450,
+        "leads": 124,
+        "ctr": 1.47,
+        "inquiries": 8,
+        "siteVisits": 42
+      },
+      "nearbyFacilities": [
+        "Juhu Beach - 0.1 km",
+        "Mumbai Airport - 5.0 km",
+        "JVPD Scheme - 2.0 km",
+        "American School - 3.5 km",
+        "Kokilaben Hospital - 4.2 km"
+      ],
+      "createdAt": "2023-12-20T10:30:00Z",
+      "updatedAt": "2024-01-15T12:00:00Z",
+      "featured": false,
+      "popular": false
+    }
+  ],
+  "builders": [
+    {
+      "id": "builder-001",
+      "name": "Premium Constructions",
+      "description": "Leading luxury residential developer with 20+ years of experience",
+      "established": 2003,
+      "totalProjects": 45,
+      "certifications": ["ISO 9001", "Green Building", "CREDAI Member"]
+    },
+    {
+      "id": "builder-002",
+      "name": "EcoSpace Developers",
+      "description": "Sustainable development specialists focused on eco-friendly communities",
+      "established": 2010,
+      "totalProjects": 28,
+      "certifications": ["IGBC", "LEED", "Green Rating"]
+    },
+    {
+      "id": "builder-003",
+      "name": "Crown Builders",
+      "description": "Premium residential and commercial developments in major IT hubs",
+      "established": 2008,
+      "totalProjects": 35,
+      "certifications": ["RERA", "ISO 14001", "OHSAS 18001"]
+    },
+    {
+      "id": "builder-004",
+      "name": "Nature Homes",
+      "description": "Integrated lifestyle communities with focus on green living",
+      "established": 2012,
+      "totalProjects": 22,
+      "certifications": ["Green Building", "IGBC", "Sustainable Development"]
+    },
+    {
+      "id": "builder-005",
+      "name": "Metro Constructions",
+      "description": "Urban development specialists with smart city solutions",
+      "established": 2005,
+      "totalProjects": 52,
+      "certifications": ["Smart City", "RERA", "Quality Management"]
+    },
+    {
+      "id": "builder-006",
+      "name": "Coastal Developers",
+      "description": "Ultra-luxury waterfront developments and premium real estate",
+      "established": 1998,
+      "totalProjects": 18,
+      "certifications": ["Luxury Development", "Coastal Zone", "Premium Quality"]
+    }
+  ],
+  "cities": [
+    {
+      "name": "Mumbai",
+      "state": "Maharashtra",
+      "popularAreas": ["Bandra West", "Juhu", "Andheri", "Powai", "Lower Parel"],
+      "avgPricePerSqft": 28000,
+      "totalProjects": 2
+    },
+    {
+      "name": "Pune",
+      "state": "Maharashtra", 
+      "popularAreas": ["Kharadi", "Hinjewadi", "Baner", "Wakad", "Magarpatta"],
+      "avgPricePerSqft": 8500,
+      "totalProjects": 1
+    },
+    {
+      "name": "Bangalore",
+      "state": "Karnataka",
+      "popularAreas": ["Whitefield", "Electronic City", "Hebbal", "Sarjapur", "Koramangala"],
+      "avgPricePerSqft": 12000,
+      "totalProjects": 1
+    },
+    {
+      "name": "Chennai",
+      "state": "Tamil Nadu",
+      "popularAreas": ["OMR", "Velachery", "Anna Nagar", "T. Nagar", "Adyar"],
+      "avgPricePerSqft": 9500,
+      "totalProjects": 1
+    },
+    {
+      "name": "Delhi",
+      "state": "Delhi",
+      "popularAreas": ["Dwarka", "Gurgaon", "Noida", "Greater Noida", "Faridabad"],
+      "avgPricePerSqft": 13500,
+      "totalProjects": 1
+    }
+  ],
+  "amenityCategories": [
+    {
+      "category": "Sports & Recreation",
+      "amenities": ["Swimming Pool", "Gymnasium", "Tennis Court", "Squash Court", "Badminton Court", "Basketball Court", "Cricket Pitch", "Football Ground", "Cycling Track", "Jogging Track", "Skating Rink", "Golf Course"]
+    },
+    {
+      "category": "Wellness & Health",
+      "amenities": ["Spa & Wellness Center", "Yoga Studio", "Meditation Center", "Reflexology Path", "Outdoor Fitness", "Health Club", "Aerobics Room", "Steam & Sauna", "Massage Center"]
+    },
+    {
+      "category": "Entertainment",
+      "amenities": ["Clubhouse", "Mini Theater", "Indoor Games Room", "Banquet Hall", "Party Hall", "Amphitheater", "Open Air Theater", "Music Room", "Dance Studio", "Art Gallery"]
+    },
+    {
+      "category": "Children & Family",
+      "amenities": ["Children's Play Area", "Children's Adventure Park", "Kids Pool", "Daycare Center", "Senior Citizen Area", "Pet Park", "Family Lounge"]
+    },
+    {
+      "category": "Business & Work",
+      "amenities": ["Business Center", "Co-working Space", "Conference Room", "Library", "Study Room", "Internet Café", "Business Lounge"]
+    },
+    {
+      "category": "Lifestyle & Convenience",
+      "amenities": ["Concierge Services", "Valet Parking", "Guest Suites", "Grocery Store", "ATM", "Pharmacy", "Laundry Service", "Dry Cleaning", "Café", "Restaurant"]
+    },
+    {
+      "category": "Green & Environment",
+      "amenities": ["Landscaped Gardens", "Organic Garden", "Botanical Garden", "Herb Garden", "Rainwater Harvesting", "Solar Panels", "Waste Management System", "EV Charging Stations", "Green Building Features"]
+    },
+    {
+      "category": "Safety & Security",
+      "amenities": ["24/7 Security", "CCTV Surveillance", "Access Control", "Fire Safety Systems", "Emergency Response", "Intercom Facility", "Visitor Management"]
+    }
+  ],
+  "priceRanges": [
+    {
+      "label": "Under ₹50L",
+      "min": 0,
+      "max": 5000000
+    },
+    {
+      "label": "₹50L - ₹1Cr",
+      "min": 5000000,
+      "max": 10000000
+    },
+    {
+      "label": "₹1Cr - ₹2Cr",
+      "min": 10000000,
+      "max": 20000000
+    },
+    {
+      "label": "₹2Cr - ₹5Cr",
+      "min": 20000000,
+      "max": 50000000
+    },
+    {
+      "label": "Above ₹5Cr",
+      "min": 50000000,
+      "max": 999999999
+    }
+  ]
+}

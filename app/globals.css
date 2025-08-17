@@ -3,24 +3,83 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
+  --font-inter: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
 
-@theme inline {
+  /* Typography */
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-geist-mono);
+
+  /* Static colors */
+  --color-static-black: #000000;
+  --color-static-white: #ffffff;
+
+  /* Background tokens */
+  --color-bg-strong-950: #0F172A;
+  --color-bg-surface-800: #1E293B;
+  --color-bg-sub-300: #CBD5E1;
+  --color-bg-soft-200: #E2E8F0;
+  --color-bg-weak-50: #F8FAFC;
+  --color-bg-white-0: #FFFFFF;
+
+  /* Neutral scale */
+  --color-neutral-950: #0E121B;
+  --color-neutral-900: #181925;
+  --color-neutral-800: #222530;
+  --color-neutral-700: #2B303B;
+  --color-neutral-600: #525866;
+  --color-neutral-500: #717784;
+  --color-neutral-400: #9CA3AF;
+  --color-neutral-300: #CACFD8;
+  --color-neutral-200: #E1E4EA;
+  --color-neutral-100: #F2F4F8;
+  --color-neutral-50: #F8F7FA;
+  --color-neutral-0: #FFFFFF;
+
+  /* Primary blue scale (normalized where needed) */
+  --color-primary-dark: #1E40AF; /* blue-800 */
+  --color-primary-darker: #1D4ED8; /* blue-700 */
+  --color-primary-base: #3B82F6; /* blue-500 */
+  --color-primary-light: #60A5FA; /* blue-400 - fixed missing digit */
+  --color-primary-alpha-16: rgb(59 130 246 / 0.16);
+  --color-primary-alpha-10: rgb(59 130 246 / 0.10);
+  
+  /* Complete blue scale for full design system support */
+  --color-blue-950: #122368;
+  --color-blue-900: #1E2F8B;
+  --color-blue-800: #1F38AD;
+  --color-blue-700: #1D4ED8; /* Fixed from green #254700 */
+  --color-blue-600: #3559E9;
+  --color-blue-500: #535CFF;
+  --color-blue-400: #60A5FA; /* Fixed from incomplete #6B93F */
+  --color-blue-300: #87BAFF;
+  --color-blue-200: #A2D5FF;
+  --color-blue-100: #C5E2FF;
+  --color-blue-50: #EBF1FF;
+
+  /* Foreground/background semantic */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+
+  /* Spacing scale (used via arbitrary values or mapping in components) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter);
 }
