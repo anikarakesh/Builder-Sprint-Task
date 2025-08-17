@@ -73,8 +73,8 @@ export function PropertyCard({ project, variant = "default", className = "" }: P
             <span className="text-[--color-neutral-600] text-sm ml-1">onwards</span>
           </div>
           {mainConfig && (
-            <span className="text-[--color-neutral-600] text-sm">
-              {formatArea(mainConfig.area)}
+            <span className="text-[--color-neutral-600] text-xsm">
+              {/* {formatArea(mainConfig.area)} */}
             </span>
           )}
         </div>

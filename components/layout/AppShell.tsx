@@ -10,10 +10,12 @@ export type AppShellProps = PropsWithChildren<{
 
 export function AppShell({ children, headerSlot, footerSlot }: AppShellProps) {
   return (
-    <div className="min-h-screen grid grid-rows-[auto_1fr_auto]">
+    <div className="min-h-screen">
       <SkipLink />
       {headerSlot ?? <Header />}
-      <main id="main-content" tabIndex={-1}>{children}</main>
+      <main id="main-content" tabIndex={-1} className="pt-20">
+        {children}
+      </main>
       {footerSlot ?? <Footer />}
     </div>
   );

@@ -4,78 +4,214 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-[--color-neutral-200] bg-[--color-bg-weak-50]">
-      <div className="mx-auto w-full max-w-6xl px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Brand Section */}
-          <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-[--color-primary-base] rounded-[--radius-md] flex items-center justify-center">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
-                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                  <polyline points="9,22 9,12 15,12 15,22"/>
-                </svg>
+    <footer className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-blue-900 text-white overflow-hidden">
+      {/* Luxury background elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-blue-500/10 via-purple-500/5 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-gradient-to-tl from-purple-500/10 via-blue-500/5 to-transparent rounded-full blur-3xl"></div>
+        
+        {/* Floating particles */}
+        <div className="absolute top-1/4 left-1/6 w-2 h-2 bg-blue-400/30 rounded-full animate-float-particle"></div>
+        <div className="absolute top-3/4 right-1/6 w-1.5 h-1.5 bg-purple-400/20 rounded-full animate-float-particle [animation-delay:4s]"></div>
+        <div className="absolute top-1/2 left-1/2 w-1 h-1 bg-cyan-400/25 rounded-full animate-float-particle [animation-delay:2s]"></div>
+      </div>
+
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-6 py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-16">
+          {/* Premium Brand Section */}
+          <div className="lg:col-span-5">
+            <div className="flex items-center gap-4 mb-8">
+              <div className="relative">
+                <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl blur opacity-40"></div>
+                <div className="relative w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center shadow-2xl">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                    <polyline points="9,22 9,12 15,12 15,22"/>
+                  </svg>
+                </div>
               </div>
-              <span className="text-[--color-neutral-900] font-bold text-lg">RealEstate</span>
+              <div>
+                <span className="text-white font-black text-2xl tracking-tight">
+                  Real<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-300">Estate</span>
+                </span>
+                <div className="text-blue-200 text-sm font-medium -mt-1">Premium Properties</div>
+              </div>
             </div>
-            <p className="text-[--color-neutral-600] text-sm mb-4 max-w-md">
-              India's most trusted real estate platform connecting buyers with verified builders. 
-              Find your dream home from premium properties across major cities.
+            
+            <p className="text-white/80 text-base leading-relaxed mb-8 max-w-md font-light">
+              India's most sophisticated real estate platform connecting discerning buyers with 
+              premium builders. Experience luxury property discovery like never before.
             </p>
-            <div className="flex space-x-4">
-              {/* Social Media Icons */}
-              <a href="#" className="text-[--color-neutral-500] hover:text-[--color-primary-base] transition-colors">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
-                </svg>
-              </a>
-              <a href="#" className="text-[--color-neutral-500] hover:text-[--color-primary-base] transition-colors">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
-                </svg>
-              </a>
-              <a href="#" className="text-[--color-neutral-500] hover:text-[--color-primary-base] transition-colors">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                </svg>
-              </a>
+            
+            {/* Premium stats */}
+            <div className="grid grid-cols-3 gap-6 mb-8">
+              {[
+                { value: "500+", label: "Premium Properties" },
+                { value: "25+", label: "Cities" },
+                { value: "10K+", label: "Happy Clients" }
+              ].map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-300 mb-1">
+                    {stat.value}
+                  </div>
+                  <div className="text-xs text-white/60 font-medium">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+
+            {/* Premium Social Media */}
+            <div className="flex gap-4">
+              {[
+                { name: "Twitter", icon: "𝕏", gradient: "from-slate-600 to-slate-700" },
+                { name: "Facebook", icon: "📘", gradient: "from-blue-600 to-blue-700" },
+                { name: "LinkedIn", icon: "💼", gradient: "from-blue-700 to-blue-800" },
+                { name: "Instagram", icon: "📷", gradient: "from-purple-600 to-pink-600" }
+              ].map((social, index) => (
+                <a
+                  key={social.name}
+                  href="#"
+                  className="group relative w-12 h-12 rounded-2xl overflow-hidden"
+                  aria-label={`Follow us on ${social.name}`}
+                >
+                  <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl blur opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                  <div className={`relative w-full h-full bg-gradient-to-br ${social.gradient} rounded-2xl flex items-center justify-center text-xl shadow-xl group-hover:scale-105 group-hover:rotate-3 transition-all duration-300`}>
+                    {social.icon}
+                  </div>
+                </a>
+              ))}
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h3 className="font-semibold text-[--color-neutral-900] mb-4">For Buyers</h3>
-            <ul className="space-y-2 text-sm">
-              <li><Link href="/buyers" className="text-[--color-neutral-600] hover:text-[--color-primary-base] transition-colors">Search Properties</Link></li>
-              <li><Link href="/buyers?category=luxury" className="text-[--color-neutral-600] hover:text-[--color-primary-base] transition-colors">Luxury Homes</Link></li>
-              <li><Link href="/buyers?category=premium" className="text-[--color-neutral-600] hover:text-[--color-primary-base] transition-colors">Premium Apartments</Link></li>
-              <li><Link href="/financing" className="text-[--color-neutral-600] hover:text-[--color-primary-base] transition-colors">Home Loans</Link></li>
-              <li><Link href="/guides" className="text-[--color-neutral-600] hover:text-[--color-primary-base] transition-colors">Buying Guide</Link></li>
-            </ul>
-          </div>
+          {/* Premium Navigation Links */}
+          <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* For Buyers */}
+            <div className="space-y-6">
+              <div className="flex items-center gap-2 mb-6">
+                <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center text-sm">
+                  🏠
+                </div>
+                <h3 className="font-black text-white text-lg">For Buyers</h3>
+              </div>
+              <ul className="space-y-3">
+                {[
+                  { href: "/buyers", label: "Search Properties" },
+                  { href: "/buyers?category=luxury", label: "Luxury Homes" },
+                  { href: "/buyers?category=premium", label: "Premium Apartments" },
+                  { href: "/financing", label: "Home Loans" },
+                  { href: "/guides", label: "Buying Guide" }
+                ].map((link, index) => (
+                  <li key={index}>
+                    <Link 
+                      href={link.href} 
+                      className="group text-white/70 hover:text-white transition-all duration-300 text-sm font-medium flex items-center gap-2"
+                    >
+                      <span className="w-1 h-1 bg-blue-400/50 rounded-full group-hover:bg-blue-400 transition-colors duration-300"></span>
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          {/* Company */}
-          <div>
-            <h3 className="font-semibold text-[--color-neutral-900] mb-4">Company</h3>
-            <ul className="space-y-2 text-sm">
-              <li><Link href="/about" className="text-[--color-neutral-600] hover:text-[--color-primary-base] transition-colors">About Us</Link></li>
-              <li><Link href="/careers" className="text-[--color-neutral-600] hover:text-[--color-primary-base] transition-colors">Careers</Link></li>
-              <li><Link href="/press" className="text-[--color-neutral-600] hover:text-[--color-primary-base] transition-colors">Press</Link></li>
-              <li><Link href="/contact" className="text-[--color-neutral-600] hover:text-[--color-primary-base] transition-colors">Contact</Link></li>
-              <li><Link href="/support" className="text-[--color-neutral-600] hover:text-[--color-primary-base] transition-colors">Support</Link></li>
-            </ul>
+            {/* For Builders */}
+            <div className="space-y-6">
+              <div className="flex items-center gap-2 mb-6">
+                <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center text-sm">
+                  🏗️
+                </div>
+                <h3 className="font-black text-white text-lg">For Builders</h3>
+              </div>
+              <ul className="space-y-3">
+                {[
+                  { href: "/builder", label: "List Properties" },
+                  { href: "/builder/dashboard", label: "Builder Dashboard" },
+                  { href: "/builder/analytics", label: "Analytics" },
+                  { href: "/builder/support", label: "Builder Support" },
+                  { href: "/builder/pricing", label: "Pricing Plans" }
+                ].map((link, index) => (
+                  <li key={index}>
+                    <Link 
+                      href={link.href} 
+                      className="group text-white/70 hover:text-white transition-all duration-300 text-sm font-medium flex items-center gap-2"
+                    >
+                      <span className="w-1 h-1 bg-purple-400/50 rounded-full group-hover:bg-purple-400 transition-colors duration-300"></span>
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Company */}
+            <div className="space-y-6">
+              <div className="flex items-center gap-2 mb-6">
+                <div className="w-8 h-8 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center text-sm">
+                  🏢
+                </div>
+                <h3 className="font-black text-white text-lg">Company</h3>
+              </div>
+              <ul className="space-y-3">
+                {[
+                  { href: "/about", label: "About Us" },
+                  { href: "/careers", label: "Careers" },
+                  { href: "/press", label: "Press & Media" },
+                  { href: "/contact", label: "Contact Us" },
+                  { href: "/support", label: "Help Center" }
+                ].map((link, index) => (
+                  <li key={index}>
+                    <Link 
+                      href={link.href} 
+                      className="group text-white/70 hover:text-white transition-all duration-300 text-sm font-medium flex items-center gap-2"
+                    >
+                      <span className="w-1 h-1 bg-green-400/50 rounded-full group-hover:bg-green-400 transition-colors duration-300"></span>
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
 
-        {/* Bottom Section */}
-        <div className="border-t border-[--color-neutral-200] mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <div className="text-sm text-[--color-neutral-600] mb-4 md:mb-0">
-            © {currentYear} RealEstate. All rights reserved.
-          </div>
-          <div className="flex space-x-6 text-sm">
-            <Link href="/privacy" className="text-[--color-neutral-600] hover:text-[--color-primary-base] transition-colors">Privacy Policy</Link>
-            <Link href="/terms" className="text-[--color-neutral-600] hover:text-[--color-primary-base] transition-colors">Terms of Service</Link>
-            <Link href="/cookies" className="text-[--color-neutral-600] hover:text-[--color-primary-base] transition-colors">Cookie Policy</Link>
+        {/* Premium Bottom Section */}
+        <div className="relative">
+          <div className="absolute inset-0 bg-gradient-to-r from-white/5 via-white/10 to-white/5 rounded-2xl backdrop-blur-sm"></div>
+          <div className="relative p-8 rounded-2xl border border-white/10">
+            <div className="flex flex-col lg:flex-row justify-between items-center gap-6">
+              <div className="flex flex-col sm:flex-row items-center gap-6">
+                <div className="text-white/80 font-medium">
+                  © {currentYear} RealEstate. All rights reserved.
+                </div>
+                <div className="flex items-center gap-4">
+                  {[
+                    { icon: "🛡️", text: "RERA Certified" },
+                    { icon: "🏆", text: "Award Winning" },
+                    { icon: "✓", text: "Trusted Platform" }
+                  ].map((badge, index) => (
+                    <div key={index} className="flex items-center gap-1 px-3 py-1 bg-white/10 rounded-full">
+                      <span className="text-xs">{badge.icon}</span>
+                      <span className="text-xs text-white/70 font-medium">{badge.text}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              
+              <div className="flex flex-wrap gap-6 text-sm">
+                {[
+                  { href: "/privacy", label: "Privacy Policy" },
+                  { href: "/terms", label: "Terms of Service" },
+                  { href: "/cookies", label: "Cookie Policy" }
+                ].map((link, index) => (
+                  <Link
+                    key={index}
+                    href={link.href}
+                    className="text-white/70 hover:text-white transition-colors duration-300 font-medium"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>

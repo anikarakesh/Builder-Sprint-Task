@@ -31,348 +31,514 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-[var(--color-bg-white-0)]">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50/30">
       {/* Hero Section */}
-
-      <section className="relative bg-[var(--color-bg-white-0)] py-20 lg:py-32 overflow-hidden">
-        {/* Animated background decorative elements */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Luxury Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-bl from-[var(--color-blue-50)] to-transparent rounded-full blur-3xl opacity-30 animate-pulse-slow"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-[var(--color-primary-alpha-10)] to-transparent rounded-full blur-3xl opacity-30 animate-pulse-slow [animation-delay:2s]"></div>
+          {/* Primary gradient orbs */}
+          <div className="absolute -top-1/2 -right-1/3 w-[800px] h-[800px] bg-gradient-to-bl from-blue-400/20 via-purple-400/10 to-transparent rounded-full blur-3xl animate-float-slow"></div>
+          <div className="absolute -bottom-1/2 -left-1/3 w-[600px] h-[600px] bg-gradient-to-tr from-indigo-400/15 via-blue-400/10 to-transparent rounded-full blur-3xl animate-float-slow [animation-delay:3s]"></div>
+          <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] bg-gradient-to-br from-cyan-300/10 to-transparent rounded-full blur-2xl animate-float-slow [animation-delay:1s]"></div>
+          
+          {/* Glass morphism overlay */}
+          <div className="absolute inset-0 backdrop-blur-[0.5px] bg-gradient-to-b from-white/5 via-transparent to-white/5"></div>
+          
+          {/* Floating particles */}
+          <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-blue-400/40 rounded-full animate-float-particle"></div>
+          <div className="absolute top-3/4 right-1/3 w-1.5 h-1.5 bg-purple-400/30 rounded-full animate-float-particle [animation-delay:2s]"></div>
+          <div className="absolute top-1/2 left-3/4 w-1 h-1 bg-cyan-400/40 rounded-full animate-float-particle [animation-delay:4s]"></div>
         </div>
         <Container>
-          <div className="text-center max-w-5xl mx-auto relative z-10">
-            <Heading level={1} size="3xl" className="mb-6 max-w-4xl mx-auto font-extrabold leading-tight tracking-tighter">
-              Your Journey to the Perfect Property Starts <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-primary-base)] to-[var(--color-primary-darker)]">Here</span>
+          <div className="text-center max-w-6xl mx-auto relative z-10">
+            {/* Premium badge */}
+            <div className="inline-flex items-center gap-3 px-6 py-3 mb-8 bg-white/80 backdrop-blur-md border border-white/20 rounded-full shadow-lg shadow-blue-500/10">
+              <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full animate-pulse"></div>
+              <Text size="sm" className="text-slate-700 font-semibold tracking-wide uppercase">Premium Real Estate Platform</Text>
+              <div className="w-2 h-2 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full animate-pulse [animation-delay:1s]"></div>
+            </div>
+
+            <Heading level={1} className="mb-8 text-5xl md:text-6xl lg:text-7xl font-black leading-[1.1] tracking-tight max-w-5xl mx-auto">
+              <span className="block text-slate-900 mb-2">Find Your</span>
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 animate-gradient-x">Dream Property</span>
+              <span className="block text-slate-800 text-4xl md:text-5xl lg:text-6xl font-light mt-4">with Luxury & Trust</span>
             </Heading>
-            <Text size="xl" color="secondary" className="mb-12 max-w-3xl mx-auto leading-relaxed text-[var(--color-neutral-700)]">
-              Explore luxury apartments and premium homes from India's most trusted builders.
-              Seamlessly find your dream property with confidence.
+            
+            <Text size="xl" className="mb-16 max-w-4xl mx-auto leading-relaxed text-slate-600 text-lg md:text-xl font-light">
+              Experience India's most sophisticated real estate platform. Discover luxury apartments, 
+              premium homes, and exclusive properties from verified builders with unmatched service excellence.
             </Text>
             
-            {/* Enhanced Search Bar */}
-            <div className="max-w-3xl mx-auto mb-16">
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-primary-base)] to-[var(--color-primary-darker)] rounded-[var(--radius-2xl)] blur-2xl opacity-20 motion-safe:animate-pulse" aria-hidden></div>
-                <div className="relative bg-white rounded-[var(--radius-2xl)] p-3 shadow-3xl border border-[var(--color-neutral-100)]">
-                  <SearchBar 
-                    placeholder="Search by city, project, builder, or property type..."
-                    onSearch={handleSearch}
-                    className="border-0 shadow-none text-lg py-3"
-                  />
+            {/* Premium Search Bar */}
+            <div className="max-w-4xl mx-auto mb-20">
+              <div className="relative group">
+                {/* Glow effect */}
+                <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-blue-500/20 rounded-3xl blur-xl opacity-70 group-hover:opacity-100 transition-opacity duration-500 animate-pulse-slow"></div>
+                
+                {/* Glass morphism search container */}
+                <div className="relative bg-white/90 backdrop-blur-xl rounded-3xl p-2 shadow-2xl shadow-blue-500/10 border border-white/30 hover:bg-white/95 transition-all duration-300">
+                  <div className="flex items-center gap-4 p-4">
+                    <div className="flex-shrink-0">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-slate-500">
+                        <circle cx="11" cy="11" r="8"/>
+                        <path d="m21 21-4.35-4.35"/>
+                      </svg>
+                    </div>
+                    <SearchBar 
+                      placeholder="Search luxury properties, prime locations, or trusted builders..."
+                      onSearch={handleSearch}
+                      className="border-0 shadow-none text-lg py-2 bg-transparent placeholder-slate-500 text-slate-800 flex-1"
+                    />
+                    <button className="flex-shrink-0 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-2xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                      Search
+                    </button>
+                  </div>
                 </div>
               </div>
               
-              {/* Quick search suggestions */}
-              <div className="flex flex-wrap gap-3 justify-center mt-6">
-                <Text size="sm" color="muted" className="mb-0 w-full text-center text-[var(--color-neutral-500)]">
-                  Popular searches:
+              {/* Luxury search suggestions */}
+              <div className="flex flex-wrap gap-3 justify-center mt-8">
+                <Text size="sm" className="mb-0 w-full text-center text-slate-500 font-medium">
+                  Trending Searches:
                 </Text>
-                {["Luxury Villas Bangalore", "Apartments Mumbai", "Commercial Properties Delhi", "Affordable Homes Pune"].map((suggestion, index) => (
+                {["Luxury Penthouses Mumbai", "Waterfront Villas Goa", "Smart Homes Bangalore", "Heritage Properties Delhi"].map((suggestion, index) => (
                   <button
                     key={index}
                     onClick={() => handleSearch(suggestion)}
-                    className="px-4 py-2 text-sm bg-[var(--color-bg-weak-100)] text-[var(--color-neutral-700)] rounded-full hover:bg-[var(--color-primary-alpha-16)] hover:text-[var(--color-primary-base)] transition-all duration-300 border border-[var(--color-neutral-200)] hover:border-[var(--color-primary-base)] shadow-sm"
+                    className="group px-5 py-2.5 text-sm bg-white/70 backdrop-blur-sm text-slate-700 rounded-full hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:text-slate-900 transition-all duration-300 border border-white/50 hover:border-blue-200 shadow-sm hover:shadow-md transform hover:-translate-y-0.5"
                   >
-                    {suggestion}
+                    <span className="group-hover:font-medium transition-all duration-300">{suggestion}</span>
                   </button>
                 ))}
               </div>
             </div>
 
-            {/* Call to Action Buttons */}
+            {/* Luxury Call to Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Button 
-                href="/buyers"
-                variant="primary" 
-                color="blue" 
-                size="lg"
-                className="min-w-[200px] py-3.5 px-8 text-lg font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300"
-                leftIcon={
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden focusable="false">
-                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                  </svg>
-                }
-              >
-                Start Your Search
-              </Button>
-              <Button 
-                href="/builder" 
-                variant="outline" 
-                color="blue" 
-                size="lg"
-                className="min-w-[200px] py-3.5 px-8 text-lg font-semibold border-2 hover:bg-[var(--color-blue-50)] transition-all duration-300"
-              >
-                List Your Property
-              </Button>
+              <div className="relative group">
+                <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 rounded-2xl blur opacity-30 group-hover:opacity-60 transition duration-300"></div>
+                <Button 
+                  href="/buyers"
+                  className="relative bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-10 py-4 rounded-2xl font-bold text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 border-0 min-w-[240px]"
+                  leftIcon={
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden focusable="false">
+                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                  }
+                >
+                  Explore Properties
+                </Button>
+              </div>
+              
+              <div className="relative group">
+                <div className="absolute -inset-1 bg-gradient-to-r from-slate-200 to-slate-300 rounded-2xl blur opacity-30 group-hover:opacity-60 transition duration-300"></div>
+                <Button 
+                  href="/builder" 
+                  className="relative bg-white/90 backdrop-blur-sm hover:bg-white text-slate-800 hover:text-slate-900 px-10 py-4 rounded-2xl font-bold text-lg shadow-xl border border-white/50 hover:border-slate-200 transform hover:scale-105 transition-all duration-300 min-w-[240px]"
+                  leftIcon={
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden focusable="false">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                      <polyline points="14,2 14,8 20,8"/>
+                      <line x1="16" y1="13" x2="8" y2="13"/>
+                      <line x1="16" y1="17" x2="8" y2="17"/>
+                      <line x1="10" y1="9" x2="8" y2="9"/>
+                    </svg>
+                  }
+                >
+                  List Property
+                </Button>
+              </div>
             </div>
           </div>
         </Container>
       </section>
 
-      {/* Stats Section */}
-      <Section className="py-20 bg-[var(--color-bg-white-0)] relative">
-        {/* Decorative elements */}
+      {/* Luxury Stats Section */}
+      <Section className="py-24 relative bg-gradient-to-b from-white to-slate-50/50">
+        {/* Luxury background elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-[var(--color-neutral-100)] to-transparent"></div>
-          <div className="absolute left-1/2 top-0 h-full w-px bg-gradient-to-b from-transparent via-[var(--color-neutral-100)] to-transparent"></div>
-        </div>
-        <Container>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center relative z-10">
-            {stats.map((stat, index) => (
-              <div key={index} className="group space-y-4 p-8 rounded-[var(--radius-xl)] bg-[var(--color-bg-weak-50)] border border-[var(--color-neutral-100)] hover:bg-white hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 transform perspective-1000 rotate-x-0 group-hover:rotate-x-3">
-                <Heading level={3} size="3xl" color="primary" className="text-[var(--color-primary-base)] group-hover:scale-105 transition-transform duration-300 font-extrabold">
-                  {stat.value}
-                </Heading>
-                <Heading level={4} size="lg" className="mb-2 font-bold text-[var(--color-neutral-900)]">
-                  {stat.label}
-                </Heading>
-                <Text size="sm" color="muted" className="leading-relaxed text-[var(--color-neutral-600)]">
-                  {stat.description}
-                </Text>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </Section>
-
-      {/* Trust Indicators & Features */}
-      <Section className="py-20 bg-[var(--color-bg-white-0)]">
-        <Container>
-          <div className="text-center mb-16">
-            <Heading level={2} size="3xl" className="mb-4 font-extrabold">
-              Why Choose Our Platform?
-            </Heading>
-            <Text size="lg" color="secondary" className="max-w-2xl mx-auto text-[var(--color-neutral-700)]">
-              Experience the difference with India's most trusted real estate platform
-            </Text>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 mb-20">
-            {[
-              {
-                icon: (
-                  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden focusable="false">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                    <polyline points="22 4 12 14.01 9 11.01"/>
-                  </svg>
-                ),
-                title: "100% Verified Listings",
-                description: "Every property is thoroughly verified by our expert team before listing"
-              },
-              {
-                icon: (
-                  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden focusable="false">
-                    <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/>
-                    <polyline points="13 2 13 9 20 9"/>
-                    <path d="M16 16H8"/>
-                    <path d="M16 12H8"/>
-                    <path d="M12 8H8"/>
-                  </svg>
-                ),
-                title: "Legal Documentation",
-                description: "Complete legal assistance and documentation support for hassle-free transactions"
-              },
-              {
-                icon: (
-                  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden focusable="false">
-                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4z"/>
-                    <path d="M12 14c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                  </svg>
-                ),
-                title: "Premium Experience",
-                description: "Personalized service with dedicated relationship managers for every client"
-              }
-            ].map((feature, index) => (
-              <div key={index} className="group text-center p-8 rounded-[var(--radius-2xl)] bg-[var(--color-bg-weak-50)] border border-[var(--color-neutral-100)] hover:bg-white hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
-                <div className="w-20 h-20 bg-gradient-to-br from-[var(--color-primary-base)] to-[var(--color-primary-darker)] rounded-full flex items-center justify-center mx-auto mb-6 text-white group-hover:scale-105 transition-transform duration-300 shadow-lg">
-                  {feature.icon}
-                </div>
-                <Heading level={3} size="xl" className="mb-3 font-bold text-[var(--color-neutral-900)]">
-                  {feature.title}
-                </Heading>
-                <Text color="secondary" className="leading-relaxed text-[var(--color-neutral-600)]">
-                  {feature.description}
-                </Text>
-              </div>
-            ))}
-          </div>
-          
-          {/* Trust badges */}
-          <div className="bg-[var(--color-bg-weak-50)] rounded-[var(--radius-2xl)] p-8 md:p-12 border border-[var(--color-neutral-100)] shadow-inner">
-            <div className="text-center mb-10">
-              <Text size="sm" color="muted" className="uppercase tracking-wider font-semibold text-[var(--color-neutral-500)]">
-                Trusted by Leading Organizations
-              </Text>
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12 items-center justify-center">
-              {["Bank Partner", "RERA Certified", "ISO Certified", "Award Winner"].map((badge, index) => (
-                <div key={index} className="text-center opacity-80 hover:opacity-100 transition-opacity duration-300">
-                  <div className="w-16 h-16 bg-[var(--color-neutral-100)] rounded-[var(--radius-md)] mx-auto mb-3 flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform duration-300">
-                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[var(--color-neutral-600)]">
-                      <path d="M9 12l2 2 4-4"/>
-                      <path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/>
-                    </svg>
-                  </div>
-                  <Text size="sm" color="muted" className="font-semibold text-[var(--color-neutral-700)]">
-                    {badge}
-                  </Text>
-                </div>
-              ))}
-            </div>
-          </div>
-        </Container>
-      </Section>
-
-      {/* Featured Properties */}
-      <Section className="py-20 relative bg-[var(--color-bg-white-0)]">
-        <Container>
-          {/* Section header with enhanced styling */}
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-[var(--color-primary-alpha-10)] px-4 py-2 rounded-full mb-4">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[var(--color-primary-base)]" aria-hidden focusable="false">
-                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-              </svg>
-              <Text size="sm" className="text-[var(--color-primary-base)] font-semibold uppercase tracking-wider">
-                Our Top Picks
-              </Text>
-            </div>
-            <Heading level={2} size="3xl" className="mb-4 font-extrabold">
-              Featured Properties
-            </Heading>
-            <Text size="lg" color="secondary" className="max-w-2xl mx-auto text-[var(--color-neutral-700)]">
-              Handpicked premium properties from our top builders, curated just for you
-            </Text>
-          </div>
-          
-          {loading ? (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[...Array(6)].map((_, index) => (
-                <div key={index} className="bg-[var(--color-bg-weak-50)] rounded-[var(--radius-xl)] h-80 motion-safe:animate-pulse shadow-md"></div>
-              ))}
-            </div>
-          ) : featuredProjects.length > 0 ? (
-            <PopularSection
-              title=""
-              subtitle=""
-              projects={featuredProjects}
-              loading={loading}
-              showViewAll={true}
-              viewAllLink="/buyers"
-              variant="default"
-            />
-          ) : (
-            <div className="text-center py-12">
-              <Text color="muted">No featured properties available at the moment.</Text>
-            </div>
-          )}
-        </Container>
-      </Section>
-
-      {/* Popular Properties */}
-      <Section className="py-20 bg-[var(--color-bg-weak-50)] relative">
-        <Container>
-          {/* Section header with enhanced styling */}
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-[var(--color-primary-alpha-10)] px-4 py-2 rounded-full mb-4">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[var(--color-primary-base)]">
-                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
-              </svg>
-              <Text size="sm" className="text-[var(--color-primary-base)] font-semibold uppercase tracking-wider">
-                Most Viewed
-              </Text>
-            </div>
-            <Heading level={2} size="3xl" className="mb-4 font-extrabold">
-              Popular Properties
-            </Heading>
-            <Text size="lg" color="secondary" className="max-w-2xl mx-auto text-[var(--color-neutral-700)]">
-              Most viewed and inquired properties this month, don't miss out!
-            </Text>
-          </div>
-          
-          {loading ? (
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[...Array(8)].map((_, index) => (
-                <div key={index} className="bg-white rounded-[var(--radius-xl)] h-64 motion-safe:animate-pulse shadow-lg"></div>
-              ))}
-            </div>
-          ) : popularProjects.length > 0 ? (
-            <PopularSection
-              title=""
-              subtitle=""
-              projects={popularProjects}
-              loading={loading}
-              showViewAll={true}
-              viewAllLink="/buyers"
-              variant="compact"
-            />
-          ) : (
-            <div className="text-center py-12">
-              <Text color="muted">No popular properties available at the moment.</Text>
-            </div>
-          )}
-        </Container>
-      </Section>
-
-      {/* City Highlights */}
-      <Section className="py-20 relative bg-[var(--color-bg-white-0)]">
-        {/* Background pattern */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-br from-[var(--color-blue-50)] to-transparent rounded-full blur-3xl opacity-40"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-gradient-to-bl from-[var(--color-primary-alpha-10)] to-transparent rounded-full blur-3xl opacity-40"></div>
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-blue-100/40 to-transparent rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-gradient-to-tl from-purple-100/40 to-transparent rounded-full blur-3xl"></div>
         </div>
         
         <Container>
-          <div className="text-center mb-16 relative z-10">
-            <div className="inline-flex items-center gap-2 bg-[var(--color-primary-alpha-10)] px-4 py-2 rounded-full mb-4">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[var(--color-primary-base)]" aria-hidden focusable="false">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                <circle cx="12" cy="10" r="3"/>
-              </svg>
-              <Text size="sm" className="text-[var(--color-primary-base)] font-semibold uppercase tracking-wider">
-                Top Cities
-              </Text>
+          {/* Premium section header */}
+          <div className="text-center mb-20">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm border border-white/30 rounded-full shadow-lg mb-6">
+              <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
+              <Text size="sm" className="text-slate-600 font-semibold uppercase tracking-wider">Platform Excellence</Text>
             </div>
-            <Heading level={2} size="3xl" className="mb-6 font-extrabold">
-              Explore Properties by City
+            <Heading level={2} className="text-4xl md:text-5xl font-black text-slate-900 mb-6">
+              Trusted by <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Thousands</span>
             </Heading>
-            <Text size="lg" color="secondary" className="max-w-2xl mx-auto leading-relaxed text-[var(--color-neutral-700)]">
-              Discover the best residential projects in India's fastest-growing cities and unlock premium investment opportunities
+            <Text size="lg" className="text-slate-600 max-w-2xl mx-auto font-light">
+              Leading India's premium real estate market with unmatched expertise and trust
+            </Text>
+          </div>
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+            {stats.map((stat, index) => (
+              <div key={index} className="group relative">
+                {/* Glow effect */}
+                <div className="absolute -inset-2 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-blue-500/10 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                {/* Glass morphism card */}
+                <div className="relative h-full p-8 rounded-3xl bg-white/80 backdrop-blur-xl border border-white/30 shadow-xl hover:shadow-2xl hover:bg-white/90 hover:-translate-y-3 transition-all duration-500 transform group-hover:scale-[1.02]">
+                  {/* Premium number display */}
+                  <div className="mb-6">
+                    <Heading level={3} className="text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 group-hover:from-purple-600 group-hover:to-blue-600 transition-all duration-500 leading-none">
+                      {stat.value}
+                    </Heading>
+                  </div>
+                  
+                  <Heading level={4} className="text-xl font-bold text-slate-900 mb-3 group-hover:text-slate-800 transition-colors duration-300">
+                    {stat.label}
+                  </Heading>
+                  
+                  <Text size="sm" className="text-slate-600 leading-relaxed font-medium">
+                    {stat.description}
+                  </Text>
+                  
+                  {/* Decorative elements */}
+                  <div className="absolute top-4 right-4 w-12 h-12 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
+                  <div className="absolute bottom-4 left-4 w-6 h-6 bg-gradient-to-br from-purple-200 to-blue-200 rounded-full opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </Section>
+
+      {/* Premium Features Section */}
+      <Section className="py-32 relative bg-gradient-to-br from-slate-50 via-white to-blue-50/30">
+        {/* Luxury background */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/3 left-0 w-[600px] h-[600px] bg-gradient-to-r from-blue-200/20 to-transparent rounded-full blur-3xl"></div>
+          <div className="absolute bottom-1/3 right-0 w-[500px] h-[500px] bg-gradient-to-l from-purple-200/20 to-transparent rounded-full blur-3xl"></div>
+        </div>
+        
+        <Container>
+          <div className="text-center mb-20 relative z-10">
+            <div className="inline-flex items-center gap-2 px-6 py-3 bg-white/80 backdrop-blur-sm border border-white/30 rounded-full shadow-lg mb-8">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-blue-600">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              <Text size="sm" className="text-slate-700 font-bold uppercase tracking-wider">Premium Excellence</Text>
+            </div>
+            
+            <Heading level={2} className="text-5xl md:text-6xl font-black text-slate-900 mb-8 leading-tight">
+              Why We're <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Different</span>
+            </Heading>
+            <Text size="xl" className="text-slate-600 max-w-3xl mx-auto font-light leading-relaxed">
+              Experience unmatched luxury and trust with India's most sophisticated real estate platform, 
+              where every detail is crafted for your success.
             </Text>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 relative z-10">
-            {["Mumbai", "Delhi", "Bangalore", "Pune", "Chennai"].map((city, index) => (
-              <Link key={city} href={`/buyers?city=${city.toLowerCase()}`}>
-                <div 
-                  className="group relative p-8 rounded-[var(--radius-2xl)] bg-[var(--color-bg-weak-50)] border border-[var(--color-neutral-100)] hover:border-[var(--color-primary-base)] hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden transform perspective-1000 rotate-x-0 group-hover:rotate-x-3"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  {/* Enhanced hover background effect */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-primary-alpha-10)] via-[var(--color-blue-50)] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div className="grid md:grid-cols-3 gap-12 mb-24 relative z-10">
+            {[
+              {
+                icon: (
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden focusable="false">
+                    <path d="M9 12l2 2 4-4"/>
+                    <path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/>
+                  </svg>
+                ),
+                title: "100% Verified Luxury",
+                description: "Every premium property undergoes rigorous verification by our expert team, ensuring authenticity and quality that exceeds expectations.",
+                gradient: "from-emerald-500 to-teal-600"
+              },
+              {
+                icon: (
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden focusable="false">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                    <polyline points="14,2 14,8 20,8"/>
+                    <line x1="16" y1="13" x2="8" y2="13"/>
+                    <line x1="16" y1="17" x2="8" y2="17"/>
+                  </svg>
+                ),
+                title: "Legal Excellence",
+                description: "Comprehensive legal support and documentation services with our network of top legal experts, ensuring seamless and secure transactions.",
+                gradient: "from-blue-500 to-indigo-600"
+              },
+              {
+                icon: (
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden focusable="false">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                  </svg>
+                ),
+                title: "Concierge Service",
+                description: "White-glove treatment with dedicated relationship managers, personalized consultations, and exclusive access to off-market properties.",
+                gradient: "from-purple-500 to-pink-600"
+              }
+            ].map((feature, index) => (
+              <div key={index} className="group relative">
+                {/* Hover glow */}
+                <div className="absolute -inset-3 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-blue-500/10 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                
+                {/* Main card */}
+                <div className="relative h-full p-10 rounded-3xl bg-white/90 backdrop-blur-xl border border-white/40 shadow-xl hover:shadow-2xl hover:bg-white/95 hover:-translate-y-4 transition-all duration-700 transform group-hover:scale-105">
+                  {/* Icon with luxury styling */}
+                  <div className={`w-20 h-20 bg-gradient-to-br ${feature.gradient} rounded-2xl flex items-center justify-center mx-auto mb-8 text-white shadow-2xl shadow-blue-500/25 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500`}>
+                    {feature.icon}
+                  </div>
                   
-                  {/* Subtle border animation */}
-                  <div className="absolute inset-0 rounded-[var(--radius-2xl)] border-2 border-transparent group-hover:border-[var(--color-primary-base)] opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                  <Heading level={3} className="text-2xl font-black text-slate-900 mb-6 group-hover:text-slate-800 transition-colors duration-300">
+                    {feature.title}
+                  </Heading>
                   
-                  <div className="relative z-10 flex flex-col items-center">
-                    <div className="w-16 h-16 bg-gradient-to-br from-[var(--color-blue-100)] to-[var(--color-blue-50)] rounded-full flex items-center justify-center mb-4 group-hover:bg-gradient-to-br group-hover:from-[var(--color-primary-base)] group-hover:to-[var(--color-primary-darker)] group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-md group-hover:shadow-lg text-white">
-                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden focusable="false">
-                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                        <circle cx="12" cy="10" r="3"/>
-                      </svg>
+                  <Text className="text-slate-600 leading-relaxed font-medium text-base">
+                    {feature.description}
+                  </Text>
+                  
+                  {/* Decorative element */}
+                  <div className="absolute bottom-6 right-6 w-8 h-8 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          {/* Premium Trust Badges */}
+          <div className="relative">
+            <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-blue-500/5 rounded-3xl blur-2xl"></div>
+            <div className="relative bg-white/80 backdrop-blur-xl rounded-3xl p-12 md:p-16 border border-white/30 shadow-2xl">
+              <div className="text-center mb-12">
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-50 to-purple-50 rounded-full mb-6">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-blue-600">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                  <Text size="sm" className="text-slate-700 font-bold uppercase tracking-wider">Certifications & Awards</Text>
+                </div>
+                <Heading level={3} className="text-3xl font-black text-slate-900 mb-4">
+                  Recognized <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Excellence</span>
+                </Heading>
+                <Text className="text-slate-600 font-medium">
+                  Trusted by industry leaders and certified by top organizations
+                </Text>
+              </div>
+              
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
+                {[
+                  { name: "Banking Partner", icon: "🏦", gradient: "from-blue-500 to-cyan-500" },
+                  { name: "RERA Certified", icon: "🏛️", gradient: "from-green-500 to-emerald-500" },
+                  { name: "ISO Certified", icon: "🌟", gradient: "from-purple-500 to-pink-500" },
+                  { name: "Award Winner", icon: "🏆", gradient: "from-amber-500 to-orange-500" }
+                ].map((badge, index) => (
+                  <div key={index} className="group text-center">
+                    <div className="relative mb-6">
+                      <div className={`w-20 h-20 bg-gradient-to-br ${badge.gradient} rounded-2xl mx-auto flex items-center justify-center shadow-xl shadow-blue-500/20 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 text-3xl`}>
+                        {badge.icon}
+                      </div>
+                      <div className="absolute -inset-2 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-3xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     </div>
-                    <Heading level={4} size="lg" className="mb-1 font-bold group-hover:text-[var(--color-primary-base)] transition-colors duration-300">
-                      {city}
-                    </Heading>
-                    <Text size="sm" color="muted" className="group-hover:text-[var(--color-neutral-600)] transition-colors duration-300 mb-2">
-                      {projects.filter(p => p.location.city === city && p.status === "active").length} Properties
+                    <Text className="font-bold text-slate-800 group-hover:text-slate-900 transition-colors duration-300">
+                      {badge.name}
                     </Text>
-                    <Text size="sm" className="text-[var(--color-primary-base)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-semibold flex items-center gap-1">
-                      Explore Now 
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <polyline points="9,18 15,12 9,6"/>
-                      </svg>
-                    </Text>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </Container>
+      </Section>
+
+      {/* Luxury Featured Properties */}
+      <Section className="py-32 relative bg-gradient-to-br from-white via-slate-50/50 to-blue-50/30">
+        {/* Premium background elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-gradient-to-l from-blue-200/20 via-purple-200/10 to-transparent rounded-full blur-3xl"></div>
+          <div className="absolute bottom-1/4 left-0 w-[400px] h-[400px] bg-gradient-to-r from-purple-200/15 to-transparent rounded-full blur-3xl"></div>
+        </div>
+        
+        <Container>
+          {/* Luxury section header */}
+          <div className="text-center mb-24 relative z-10">
+            <div className="inline-flex items-center gap-3 px-6 py-3 mb-8 bg-white/80 backdrop-blur-sm border border-white/30 rounded-full shadow-lg">
+              <div className="w-3 h-3 bg-gradient-to-r from-amber-400 to-orange-500 rounded-full animate-pulse"></div>
+              <Text size="sm" className="text-slate-700 font-bold uppercase tracking-wider">Exclusive Collection</Text>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-amber-500">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            </div>
+            
+            <Heading level={2} className="text-5xl md:text-6xl font-black text-slate-900 mb-8 leading-tight">
+              Premium <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800">Featured</span> Properties
+            </Heading>
+            
+            <Text size="xl" className="text-slate-600 max-w-3xl mx-auto font-light leading-relaxed">
+              Discover our handpicked collection of luxury properties from India's most prestigious builders, 
+              each offering unparalleled elegance and exclusive amenities.
+            </Text>
+          </div>
+        </Container>
+      </Section>
+
+      {/* Trending Popular Properties */}
+      <Section className="py-32 relative bg-gradient-to-br from-slate-900 via-slate-800 to-blue-900">
+        {/* Luxury dark background elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-0 left-1/3 w-[600px] h-[600px] bg-gradient-to-br from-blue-500/10 via-purple-500/5 to-transparent rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 right-1/3 w-[500px] h-[500px] bg-gradient-to-tl from-purple-500/10 via-blue-500/5 to-transparent rounded-full blur-3xl"></div>
+          
+          {/* Floating particles for dark theme */}
+          <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-blue-400/40 rounded-full animate-float-particle"></div>
+          <div className="absolute top-3/4 right-1/4 w-1.5 h-1.5 bg-purple-400/30 rounded-full animate-float-particle [animation-delay:3s]"></div>
+          <div className="absolute top-1/2 right-3/4 w-1 h-1 bg-cyan-400/40 rounded-full animate-float-particle [animation-delay:1s]"></div>
+        </div>
+        
+        <Container>
+          {/* Premium dark section header */}
+          <div className="text-center mb-24 relative z-10">
+            <div className="inline-flex items-center gap-3 px-6 py-3 mb-8 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full shadow-lg">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-yellow-400 animate-pulse">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+              </svg>
+              <Text size="sm" className="text-white/90 font-bold uppercase tracking-wider">Trending Now</Text>
+              <div className="w-2 h-2 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full animate-pulse"></div>
+            </div>
+            
+            <Heading level={2} className="text-5xl md:text-6xl font-black text-white mb-8 leading-tight">
+              <span className="block text-white/90 mb-2">Popular</span>
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-orange-300 to-red-300 animate-gradient-x">Properties</span>
+            </Heading>
+            
+            <Text size="xl" className="text-white/80 max-w-3xl mx-auto font-light leading-relaxed">
+              Discover the most sought-after properties that are creating buzz in the market. 
+              These exclusive listings are in high demand - secure your viewing today!
+            </Text>
+          </div>
+          
+          <div className="relative z-10">
+            {loading ? (
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {[...Array(8)].map((_, index) => (
+                  <div key={index} className="group relative">
+                    <div className="absolute -inset-2 bg-gradient-to-r from-yellow-500/20 via-orange-500/20 to-red-500/20 rounded-3xl blur-xl opacity-50 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div className="relative bg-white/10 backdrop-blur-sm rounded-3xl h-64 border border-white/20 shadow-2xl animate-pulse">
+                      <div className="p-6 space-y-4">
+                        <div className="h-32 bg-gradient-to-br from-white/20 to-white/10 rounded-2xl"></div>
+                        <div className="h-3 bg-white/20 rounded w-3/4"></div>
+                        <div className="h-2 bg-white/10 rounded w-1/2"></div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : popularProjects.length > 0 ? (
+              <div className="relative">
+                <div className="absolute -inset-6 bg-gradient-to-r from-yellow-500/10 via-orange-500/10 to-red-500/10 rounded-3xl blur-3xl"></div>
+                <div className="relative bg-white/5 backdrop-blur-xl rounded-3xl p-8 border border-white/10 shadow-2xl">
+                  <PopularSection
+                    title=""
+                    subtitle=""
+                    projects={popularProjects}
+                    loading={loading}
+                    showViewAll={true}
+                    viewAllLink="/buyers"
+                    variant="compact"
+                  />
+                </div>
+              </div>
+            ) : (
+              <div className="text-center py-20">
+                <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-12 border border-white/20 shadow-2xl max-w-md mx-auto">
+                  <div className="w-16 h-16 bg-gradient-to-br from-white/20 to-white/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white/60">
+                      <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                    </svg>
+                  </div>
+                  <Text className="text-white/80 font-medium">No popular properties available at the moment.</Text>
+                  <Text size="sm" className="text-white/60 mt-2">Stay tuned for the latest trending properties!</Text>
+                </div>
+              </div>
+            )}
+          </div>
+        </Container>
+      </Section>
+
+      {/* Premium City Highlights */}
+      <Section className="py-32 relative bg-gradient-to-br from-white via-blue-50/30 to-purple-50/30">
+        {/* Luxury background elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/3 left-1/6 w-96 h-96 bg-gradient-to-br from-blue-300/20 via-purple-300/10 to-transparent rounded-full blur-3xl animate-float-slow"></div>
+          <div className="absolute bottom-1/3 right-1/6 w-80 h-80 bg-gradient-to-tl from-purple-300/20 via-blue-300/10 to-transparent rounded-full blur-3xl animate-float-slow [animation-delay:4s]"></div>
+          <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-br from-cyan-200/15 to-transparent rounded-full blur-2xl animate-float-slow [animation-delay:2s]"></div>
+        </div>
+        
+        <Container>
+          <div className="text-center mb-24 relative z-10">
+            <div className="inline-flex items-center gap-3 px-6 py-3 mb-8 bg-white/80 backdrop-blur-sm border border-white/30 rounded-full shadow-lg">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-blue-600">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              <Text size="sm" className="text-slate-700 font-bold uppercase tracking-wider">Prime Locations</Text>
+              <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full animate-pulse"></div>
+            </div>
+            
+            <Heading level={2} className="text-5xl md:text-6xl font-black text-slate-900 mb-8 leading-tight">
+              Explore <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800">Premium</span> Cities
+            </Heading>
+            
+            <Text size="xl" className="text-slate-600 max-w-4xl mx-auto font-light leading-relaxed">
+              Discover luxury properties in India's most prestigious metropolitan cities. Each location offers 
+              unique investment opportunities and world-class amenities in prime neighborhoods.
+            </Text>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 relative z-10">
+            {[
+              { name: "Mumbai", emoji: "🏙️", gradient: "from-blue-500 to-cyan-500", count: projects.filter(p => p.location.city === "Mumbai" && p.status === "active").length },
+              { name: "Delhi", emoji: "🏛️", gradient: "from-purple-500 to-pink-500", count: projects.filter(p => p.location.city === "Delhi" && p.status === "active").length },
+              { name: "Bangalore", emoji: "🌆", gradient: "from-green-500 to-emerald-500", count: projects.filter(p => p.location.city === "Bangalore" && p.status === "active").length },
+              { name: "Pune", emoji: "🏞️", gradient: "from-orange-500 to-red-500", count: projects.filter(p => p.location.city === "Pune" && p.status === "active").length },
+              { name: "Chennai", emoji: "🌊", gradient: "from-teal-500 to-blue-500", count: projects.filter(p => p.location.city === "Chennai" && p.status === "active").length }
+            ].map((city, index) => (
+              <Link key={city.name} href={`/buyers?city=${city.name.toLowerCase()}`}>
+                <div 
+                  className="group relative h-full"
+                  style={{ animationDelay: `${index * 150}ms` }}
+                >
+                  {/* Glow effect */}
+                  <div className="absolute -inset-3 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-blue-500/10 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                  
+                  {/* Main card */}
+                  <div className="relative h-full p-8 rounded-3xl bg-white/90 backdrop-blur-xl border border-white/40 shadow-xl hover:shadow-2xl hover:bg-white/95 hover:-translate-y-4 transition-all duration-700 transform group-hover:scale-105 overflow-hidden">
+                    {/* City icon with luxury styling */}
+                    <div className={`w-20 h-20 bg-gradient-to-br ${city.gradient} rounded-2xl flex items-center justify-center mx-auto mb-6 text-3xl shadow-2xl shadow-blue-500/25 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500`}>
+                      {city.emoji}
+                    </div>
+                    
+                    <div className="text-center">
+                      <Heading level={4} className="text-2xl font-black text-slate-900 mb-3 group-hover:text-slate-800 transition-colors duration-300">
+                        {city.name}
+                      </Heading>
+                      
+                      <div className="mb-4">
+                        <Text className="text-slate-600 font-semibold text-lg">
+                          {city.count}+ Properties
+                        </Text>
+                        <Text size="sm" className="text-slate-500">
+                          Premium locations available
+                        </Text>
+                      </div>
+                      
+                      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <Text className="text-blue-600 font-bold flex items-center justify-center gap-2">
+                          Explore Now 
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="transform group-hover:translate-x-1 transition-transform duration-300">
+                            <polyline points="9,18 15,12 9,6"/>
+                          </svg>
+                        </Text>
+                      </div>
+                    </div>
+                    
+                    {/* Decorative elements */}
+                    <div className="absolute top-4 right-4 w-8 h-8 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="absolute bottom-4 left-4 w-4 h-4 bg-gradient-to-br from-purple-200 to-blue-200 rounded-full opacity-40 group-hover:opacity-70 transition-opacity duration-300"></div>
                   </div>
                 </div>
               </Link>
@@ -381,60 +547,195 @@ export default function Home() {
         </Container>
       </Section>
 
-      {/* Newsletter Subscription */}
-      <Section className="py-20 bg-gradient-to-r from-[var(--color-bg-white-0)] to-[var(--color-bg-weak-50)]">
+      {/* Premium Newsletter Subscription */}
+      <Section className="py-32 relative bg-gradient-to-br from-slate-50 via-white to-purple-50/30">
+        {/* Luxury background elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-purple-200/20 via-blue-200/10 to-transparent rounded-full blur-3xl"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-tl from-blue-200/20 via-purple-200/10 to-transparent rounded-full blur-3xl"></div>
+        </div>
+        
         <Container>
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white rounded-[var(--radius-2xl)] p-8 md:p-12 shadow-xl border border-[var(--color-neutral-100)] relative overflow-hidden">
-              {/* Background decoration */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-[var(--color-primary-alpha-10)] to-transparent rounded-full blur-2xl"></div>
-              <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-[var(--color-blue-100)] to-transparent rounded-full blur-2xl"></div>
+          <div className="max-w-6xl mx-auto text-center relative z-10">
+            {/* Premium newsletter container */}
+            <div className="relative">
+              {/* Outer glow */}
+              <div className="absolute -inset-8 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-blue-500/10 rounded-3xl blur-3xl"></div>
               
-              <div className="relative z-10">
-                <div className="w-16 h-16 bg-gradient-to-br from-[var(--color-primary-base)] to-[var(--color-primary-darker)] rounded-full flex items-center justify-center mx-auto mb-6 shadow-md">
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                    <polyline points="22,6 12,13 2,6"/>
-                  </svg>
+              {/* Main glass morphism container */}
+              <div className="relative bg-white/80 backdrop-blur-2xl rounded-3xl p-12 md:p-16 shadow-2xl border border-white/30 overflow-hidden">
+                {/* Luxury background decorations */}
+                <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-blue-100/50 via-purple-100/30 to-transparent rounded-full blur-3xl"></div>
+                <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-purple-100/50 via-blue-100/30 to-transparent rounded-full blur-3xl"></div>
+                
+                <div className="relative z-10">
+                  {/* Premium badge */}
+                  <div className="inline-flex items-center gap-3 px-6 py-3 mb-8 bg-white/60 backdrop-blur-sm border border-white/40 rounded-full shadow-lg">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-blue-600">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                      <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                    <Text size="sm" className="text-slate-700 font-bold uppercase tracking-wider">Exclusive Insights</Text>
+                    <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full animate-pulse"></div>
+                  </div>
+                  
+                  <Heading level={2} className="text-5xl md:text-6xl font-black text-slate-900 mb-8 leading-tight">
+                    <span className="block mb-4">Stay Ahead with</span>
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800">Premium</span> Market Intelligence
+                  </Heading>
+                  
+                  <Text size="xl" className="text-slate-600 mb-12 max-w-4xl mx-auto font-light leading-relaxed">
+                    Join India's most exclusive real estate community. Receive curated property alerts, 
+                    insider market trends, and priority access to off-market luxury properties.
+                  </Text>
+                  
+                  {/* Premium subscription form */}
+                  <div className="max-w-2xl mx-auto mb-8">
+                    <form className="relative">
+                      {/* Form glow effect */}
+                      <div className="absolute -inset-2 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-blue-500/20 rounded-3xl blur-lg opacity-70 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      
+                      {/* Form container */}
+                      <div className="relative flex flex-col sm:flex-row gap-4 p-3 bg-white/90 backdrop-blur-xl rounded-3xl border border-white/40 shadow-xl">
+                        <div className="flex-1 relative">
+                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-400">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                          </svg>
+                          <input
+                            type="email"
+                            placeholder="Enter your email for exclusive access"
+                            className="w-full h-16 pl-12 pr-6 rounded-2xl border-0 bg-transparent text-slate-800 placeholder-slate-500 focus:outline-none text-lg font-medium"
+                            aria-label="Email address for premium newsletter subscription"
+                          />
+                        </div>
+                        
+                        <div className="relative group">
+                          <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl blur opacity-30 group-hover:opacity-60 transition duration-300"></div>
+                          <button 
+                            type="submit"
+                            className="relative bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-10 py-4 rounded-2xl font-bold text-lg shadow-xl transform hover:scale-105 transition-all duration-300 border-0 whitespace-nowrap h-16"
+                          >
+                            Join Elite Club
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  
+                  {/* Premium features */}
+                  <div className="grid md:grid-cols-3 gap-8 mb-8">
+                    {[
+                      { icon: "⚡", title: "Instant Alerts", desc: "First access to new listings" },
+                      { icon: "📊", title: "Market Analysis", desc: "Weekly trends & insights" },
+                      { icon: "🏆", title: "VIP Access", desc: "Exclusive off-market deals" }
+                    ].map((feature, index) => (
+                      <div key={index} className="text-center p-6 rounded-2xl bg-white/40 backdrop-blur-sm border border-white/30">
+                        <div className="text-3xl mb-3">{feature.icon}</div>
+                        <Text className="font-bold text-slate-800 mb-2">{feature.title}</Text>
+                        <Text size="sm" className="text-slate-600">{feature.desc}</Text>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  <Text size="sm" className="text-slate-500 font-medium">
+                    ✓ No spam, ever ✓ Unsubscribe anytime ✓ Premium privacy protection
+                  </Text>
                 </div>
-                
-                <Heading level={2} size="3xl" className="mb-4 font-extrabold">
-                  Stay Updated with Market Insights
-                </Heading>
-                <Text size="lg" color="secondary" className="mb-8 max-w-2xl mx-auto text-[var(--color-neutral-700)]">
-                  Get exclusive property alerts, market trends, and investment opportunities delivered to your inbox.
-                </Text>
-                
-                <form className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
-                  <input
-                    type="email"
-                    placeholder="Enter your email address"
-                    className="flex-1 h-14 px-5 rounded-[var(--radius-lg)] border border-[var(--color-neutral-300)] bg-[var(--color-bg-white-0)] text-[var(--color-neutral-900)] placeholder-[var(--color-neutral-500)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary-base)] focus:border-transparent text-base"
-                    aria-label="Email address for newsletter subscription"
-                  />
-                  <Button variant="primary" color="blue" size="lg" className="whitespace-nowrap py-3.5 px-8 text-base font-semibold shadow-md hover:shadow-lg">
-                    Subscribe Now
-                  </Button>
-                </form>
-                
-                <Text size="xs" color="muted" className="mt-4 text-[var(--color-neutral-500)]">
-                  No spam, unsubscribe anytime. Your privacy is protected.
-                </Text>
               </div>
             </div>
           </div>
         </Container>
       </Section>
 
-      {/* Call to Action */}
-      <Section className="py-24 bg-gradient-to-br from-[var(--color-primary-base)] via-[var(--color-primary-darker)] to-[var(--color-primary-dark)] text-white relative overflow-hidden">
-        {/* Background pattern */}
-        <div className="absolute inset-0 opacity-10">
+      {/* Luxury Call to Action */}
+      <Section className="py-32 bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 text-white relative overflow-hidden">
+        {/* Premium background effects */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-500/10 via-purple-500/5 to-blue-500/10"></div>
           <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle at 25% 25%, white 2px, transparent 2px), radial-gradient(circle at 75% 75%, white 2px, transparent 2px)`,
-            backgroundSize: '50px 50px',
+            backgroundImage: `radial-gradient(circle at 20% 20%, rgba(255,255,255,0.1) 1px, transparent 1px), radial-gradient(circle at 80% 80%, rgba(255,255,255,0.1) 1px, transparent 1px)`,
+            backgroundSize: '60px 60px',
           }}></div>
         </div>
+        
+        {/* Floating elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-br from-blue-400/20 to-transparent rounded-full blur-3xl animate-float-slow"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-gradient-to-bl from-purple-400/20 to-transparent rounded-full blur-3xl animate-float-slow [animation-delay:2s]"></div>
+        </div>
+        
+        <Container>
+          <div className="text-center max-w-5xl mx-auto relative z-10">
+            {/* Premium badge */}
+            <div className="inline-flex items-center gap-3 px-6 py-3 mb-8 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full">
+              <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full animate-pulse"></div>
+              <Text size="sm" className="text-white/90 font-bold uppercase tracking-wider">Ready to Begin?</Text>
+              <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full animate-pulse [animation-delay:1s]"></div>
+            </div>
+
+            <Heading level={2} className="text-5xl md:text-6xl lg:text-7xl font-black mb-8 leading-tight">
+              <span className="block text-white mb-4">Your Dream Property</span>
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-purple-300 to-blue-300 animate-gradient-x">Awaits You</span>
+            </Heading>
+            
+            <Text size="xl" className="mb-16 max-w-3xl mx-auto leading-relaxed text-white/80 font-light text-lg md:text-xl">
+              Join thousands of satisfied customers who found their perfect home through our platform. 
+              Start your luxury real estate journey today with India's most trusted property experts.
+            </Text>
+            
+            {/* Premium CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-8 justify-center items-center mb-16">
+              <div className="relative group">
+                <div className="absolute -inset-2 bg-gradient-to-r from-white/30 via-blue-200/30 to-white/30 rounded-3xl blur-lg opacity-70 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <Button 
+                  href="/buyers"
+                  className="relative bg-white text-slate-900 hover:bg-blue-50 px-12 py-5 rounded-3xl font-black text-xl shadow-2xl transform hover:scale-105 transition-all duration-300 border-0 min-w-[280px]"
+                  leftIcon={
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden focusable="false">
+                      <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                      <polyline points="3.27,6.96 12,12.01 20.73,6.96"/>
+                      <line x1="12" y1="22.08" x2="12" y2="12"/>
+                    </svg>
+                  }
+                >
+                  Find Your Property
+                </Button>
+              </div>
+              
+              <div className="relative group">
+                <div className="absolute -inset-2 bg-gradient-to-r from-blue-400/20 via-purple-400/20 to-blue-400/20 rounded-3xl blur-lg opacity-70 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <Button 
+                  href="/builder" 
+                  className="relative bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border-2 border-white/30 hover:border-white/50 px-12 py-5 rounded-3xl font-black text-xl transform hover:scale-105 transition-all duration-300 min-w-[280px]"
+                  leftIcon={
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden focusable="false">
+                      <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                    </svg>
+                  }
+                >
+                  List Your Property
+                </Button>
+              </div>
+            </div>
+            
+            {/* Trust indicators */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+              <div className="flex flex-col items-center">
+                <div className="text-3xl font-black text-white mb-2">24/7</div>
+                <div className="text-white/80 font-medium">Expert Support</div>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="text-3xl font-black text-white mb-2">100%</div>
+                <div className="text-white/80 font-medium">Verified Properties</div>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="text-3xl font-black text-white mb-2">10K+</div>
+                <div className="text-white/80 font-medium">Happy Customers</div>
+              </div>
+            </div>
+          </div>
+        </Container>
       </Section>
     </div>
   );
