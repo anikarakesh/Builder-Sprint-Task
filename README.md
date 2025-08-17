@@ -12,7 +12,7 @@ From the limited availability I tried to make it as good as possible, but I’m 
 **Note:** Wasted around 45 minutes due to vibe coding where colors were not showing (everything was black and white). Then I figured out `var` was required to be prepended to already defined colors in the `global.css` file.  
 
 Did not code anything—everything was vibe coded. I actually stopped working on UI for the past two years, so I just cooked up something with Cursor.  
-
+---
 _End of one work session._  
 
 ---
