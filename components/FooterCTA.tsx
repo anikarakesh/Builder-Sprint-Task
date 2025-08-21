@@ -1,69 +1,157 @@
+"use client"
 import React from "react";
 
 export default function FooterCTA() {
   return (
-    <section className="w-full bg-white">
+    <section className="w-full bg-gray-50">
       <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
-        <div className="rounded-[20px] bg-white">
-          <div className="pt-12">
-            <div className="relative mb-10 flex w-full items-center justify-start gap-2.5 pb-[40px] md:pb-[60px]">
-              <div className="pointer-events-none absolute inset-x-0 bottom-0 border-b border-solid border-[#99a0ae]" />
-              <h3 className="grow text-[36px] font-semibold tracking-[-0.56px] text-[#0e121b] md:text-[56px]">
-                <span className="block leading-[44px] md:leading-[64px]">550+ People Managed Homes</span>
-                <span className="leading-[44px] md:leading-[64px]">
-                  in <span className="text-[#0062e0]">Goa</span> with Us
-                </span>
-              </h3>
-              <button className="relative shrink-0 rounded-[10px] bg-[#0062e0] px-[14px] py-2 text-[14px] font-medium tracking-[-0.084px] text-white shadow-[0_1px_2px_rgba(14,18,27,0.24),0_0_0_1px_#335cff]">
-                Talk to Us
-              </button>
+        <div className="rounded-[20px] bg-white overflow-hidden">
+          {/* Hero Section with Background Image */}
+          <div className="relative">
+            {/* Background Image with Overlay */}
+            <div className="h-[350px] md:h-[450px] relative">
+              <img 
+                src="/footer_figma_builder.png" 
+                alt="Modern luxury home"
+                className="w-full h-full object-cover rounded-t-[20px]"
+                onError={(e) => {
+                  // Fallback to a placeholder if image fails to load
+                  e.currentTarget.src = "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2075&q=80";
+                }}
+              />
+              {/* White Overlay - only on image */}
+              <div className="absolute inset-0 bg-white/20 rounded-t-[20px]" />
             </div>
-            <div className="grid grid-cols-2 gap-10 py-[40px] md:grid-cols-4 md:py-[60px]">
-              <div className="flex flex-col gap-7">
-                <div className="text-[16px] font-semibold uppercase tracking-[-0.096px] text-[#0e121b]">Discover</div>
-                <div className="flex flex-col gap-4 text-[16px] font-medium text-[#525866]">
-                  <span>Home</span>
-                  <span>Properties</span>
-                  <span>About Us</span>
-                  <span>Blog</span>
-                  <span>Contact</span>
-                </div>
-              </div>
-              <div className="flex flex-col gap-7">
-                <div className="text-[16px] font-semibold uppercase tracking-[-0.096px] text-[#0e121b]">Properties</div>
-                <div className="flex flex-col gap-4 text-[16px] font-medium text-[#525866]">
-                  <span>New Projects</span>
-                  <span>Co-Working Space</span>
-                  <span>Apartments</span>
-                  <span>Holiday Homes</span>
-                </div>
-              </div>
-              <div className="flex flex-col gap-7">
-                <div className="text-[16px] font-semibold uppercase tracking-[-0.096px] text-[#0e121b]">Services</div>
-                <div className="flex flex-col gap-4 text-[16px] font-medium text-[#525866]">
-                  <span>Sell Your Property</span>
-                  <span>Rent Your Property</span>
-                  <span>Housing Loans</span>
-                </div>
-              </div>
-              <div className="flex flex-col gap-7">
-                <div className="text-[16px] font-semibold uppercase tracking-[-0.096px] text-[#0e121b]">Address</div>
-                <div className="flex flex-col gap-4 text-[16px] font-medium text-[#525866]">
-                  <span>
-                    <span className="block">2nd Floor, Innerspace Business Centre</span>
-                    <span>Chittethukara, Kakkanad 682030</span>
+          </div>
+            
+          {/* Content Section - Completely separate from image */}
+          <div className="px-8 md:px-12 lg:px-16 py-8 md:py-12 bg-white">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+              {/* Main Heading */}
+              <div className="flex-1">
+                <h2 className="text-[32px] md:text-[48px] lg:text-[56px] font-bold text-[#2c3e50] leading-tight tracking-tight">
+                  <span className="block">550+ People Managed Homes</span>
+                  <span className="block">
+                    in <span className="text-[#007bff]">Goa</span> with Us
                   </span>
-                  <span>Phone: +91 95 62 49 25 75</span>
-                  <span>Email: me@realtorhadi.com</span>
+                </h2>
+              </div>
+              
+              {/* CTA Button */}
+              <div className="flex-shrink-0">
+                <button className="bg-[#007bff] hover:bg-[#0056b3] text-white px-8 py-3 rounded-[12px] text-[16px] font-semibold transition-all duration-200 hover:scale-105 hover:shadow-xl shadow-lg">
+                  Talk to Us
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Footer Links Section */}
+          <div className="px-8 md:px-12 lg:px-16 py-12 md:py-16">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+              {/* Discover Column */}
+              <div className="space-y-6">
+                <h3 className="text-[16px] font-bold uppercase tracking-wider text-[#2c3e50]">
+                  DISCOVER
+                </h3>
+                <div className="space-y-4">
+                  {['Home', 'Properties', 'About Us', 'Blog', 'Contact'].map((item) => (
+                    <a 
+                      key={item}
+                      href="#" 
+                      className="block text-[16px] text-[#6c757d] hover:text-[#007bff] transition-colors duration-200"
+                    >
+                      {item}
+                    </a>
+                  ))}
+                </div>
+              </div>
+
+              {/* Properties Column */}
+              <div className="space-y-6">
+                <h3 className="text-[16px] font-bold uppercase tracking-wider text-[#2c3e50]">
+                  PROPERTIES
+                </h3>
+                <div className="space-y-4">
+                  {['New Projects', 'Co-Working Space', 'Apartments', 'Holiday Homes'].map((item) => (
+                    <a 
+                      key={item}
+                      href="#" 
+                      className="block text-[16px] text-[#6c757d] hover:text-[#007bff] transition-colors duration-200"
+                    >
+                      {item}
+                    </a>
+                  ))}
+                </div>
+              </div>
+
+              {/* Services Column */}
+              <div className="space-y-6">
+                <h3 className="text-[16px] font-bold uppercase tracking-wider text-[#2c3e50]">
+                  SERVICES
+                </h3>
+                <div className="space-y-4">
+                  {['Sell Your Property', 'Rent Your Property', 'Housing Loans'].map((item) => (
+                    <a 
+                      key={item}
+                      href="#" 
+                      className="block text-[16px] text-[#6c757d] hover:text-[#007bff] transition-colors duration-200"
+                    >
+                      {item}
+                    </a>
+                  ))}
+                </div>
+              </div>
+
+              {/* Address Column */}
+              <div className="space-y-6">
+                <h3 className="text-[16px] font-bold uppercase tracking-wider text-[#2c3e50]">
+                  ADDRESS
+                </h3>
+                <div className="space-y-4 text-[16px] text-[#6c757d]">
+                  <div>
+                    <div>2nd Floor, Innerspace Business Centre</div>
+                    <div>Chittethukara, Kakkanad 682030</div>
+                  </div>
+                  <div>
+                    <strong>Phone:</strong> +91 95 62 49 25 75
+                  </div>
+                  <div>
+                    <strong>Email:</strong>{' '}
+                    <a 
+                      href="mailto:me@realtorhadi.com" 
+                      className="text-[#007bff] hover:underline"
+                    >
+                      me@realtorhadi.com
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="relative flex w-full flex-col items-start justify-between gap-6 py-[40px] md:flex-row md:py-[60px]">
-              <div className="pointer-events-none absolute inset-0 border-t border-solid border-[#e1e4ea]" />
-              <div className="text-[16px] font-semibold uppercase tracking-[-0.096px] text-[#0e121b]">realtor.com © 2024 All rights reserved</div>
-              <div className="flex items-center justify-end gap-8 md:w-[392px]">
-                <span className="text-right text-[16px] font-medium text-[#525866]">Privacy Policy</span>
-                <span className="text-right text-[16px] font-medium text-[#525866]">Terms & Conditions</span>
+          </div>
+
+          {/* Bottom Section */}
+          <div className="border-t border-[#e9ecef] px-8 md:px-12 lg:px-16 py-8">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+              {/* Copyright */}
+              <div className="text-[16px] font-semibold text-[#2c3e50]">
+                REALTOR.COM © 2024 ALL RIGHTS RESERVED
+              </div>
+              
+              {/* Legal Links */}
+              <div className="flex flex-col md:flex-row gap-4 md:gap-8">
+                <a 
+                  href="#" 
+                  className="text-[16px] text-[#6c757d] hover:text-[#007bff] transition-colors duration-200"
+                >
+                  Privacy Policy
+                </a>
+                <a 
+                  href="#" 
+                  className="text-[16px] text-[#6c757d] hover:text-[#007bff] transition-colors duration-200"
+                >
+                  Terms & Conditions
+                </a>
               </div>
             </div>
           </div>
@@ -72,5 +160,3 @@ export default function FooterCTA() {
     </section>
   );
 }
-
-
