@@ -30,57 +30,59 @@ function Tabs() {
 
 export default function HeroSearch() {
   return (
-    <div className="relative h-[479px] w-[1420px] overflow-clip rounded-[20px]">
-      <div className="absolute left-0 top-[-96px] flex h-[959.984px] w-[1440px] items-center justify-center">
-        <div className="rotate-180">
-          <div className="h-[1440px] w-[960px] bg-[url('http://localhost:3845/assets/32cf4f33fceb659e25fbb3fdeb486e6c8d3cacc9.png')] bg-[length:auto,cover] bg-[position:0%_0%,50%_50%] bg-[#00000066]" />
-        </div>
-      </div>
-
-      <div className="absolute left-40 top-[140px] box-border flex w-[1120px] flex-col items-start justify-start gap-5 rounded-[17px] pb-[31px] pt-0 px-[34px]">
-        <Tabs />
-
-        <div className="relative box-border flex items-start justify-start gap-5 rounded-[87px] bg-white px-[34px] py-3.5 shadow-[0_21px_43px_0_rgba(0,0,0,0.10)]">
-          <div className="flex w-[984px] items-center justify-start gap-5">
-            <div className="w-[200px]">
-              <label className="mb-1 block text-[14px] font-medium tracking-[-0.084px] text-[#0e121b]">City</label>
-              <div className="flex items-center gap-2 overflow-clip rounded-[10px] pr-2.5 py-2.5 shadow-[0px_1px_2px_0px_rgba(10,13,20,0.03)]">
-                <span className="text-[14px] text-[#0e121b]">Bengaluru</span>
-                <span className="size-5 shrink-0" />
-              </div>
-            </div>
-            <div className="flex h-8 w-0 items-center justify-center">
-              <div className="-rotate-90">
-                <div className="flex h-0 w-8 items-center justify-center gap-2">
-                  <ContentDivider />
+    <section className="relative bg-black">
+      <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
+        <div className="relative h-[420px] overflow-clip rounded-[20px] md:h-[479px]">
+          <div className="absolute inset-0">
+            <div className="absolute inset-0 bg-[url('http://localhost:3845/assets/32cf4f33fceb659e25fbb3fdeb486e6c8d3cacc9.png')] bg-cover bg-center opacity-90" />
+          </div>
+          <div className="absolute left-0 right-0 top-[80px] mx-auto w-full max-w-5xl px-4 md:top-[140px] md:px-[34px]">
+            <Tabs />
+            <div className="relative mt-2 box-border flex items-center justify-start gap-4 rounded-[20px] bg-white px-4 py-3.5 shadow-[0_21px_43px_0_rgba(0,0,0,0.10)] md:gap-5 md:rounded-[87px] md:px-[34px]">
+              <div className="grid w-full grid-cols-1 items-center gap-4 sm:grid-cols-2 md:grid-cols-[200px_1fr_200px_auto] md:gap-5">
+                <div>
+                  <label className="mb-1 block text-[14px] font-medium tracking-[-0.084px] text-[#0e121b]">City</label>
+                  <div className="flex items-center gap-2 overflow-clip rounded-[10px] pr-2.5 py-2.5 shadow-[0px_1px_2px_0px_rgba(10,13,20,0.03)]">
+                    <span className="text-[14px] text-[#0e121b]">Bengaluru</span>
+                    <span className="size-5 shrink-0" />
+                  </div>
+                </div>
+                <div className="hidden h-8 items-center justify-center md:flex">
+                  <div className="-rotate-90">
+                    <div className="flex h-0 w-8 items-center justify-center gap-2">
+                      <ContentDivider />
+                    </div>
+                  </div>
+                </div>
+                <div className="order-last sm:order-none">
+                  <label className="mb-1 block text-[14px] font-medium tracking-[-0.084px] text-[#0e121b]">Search</label>
+                  <div className="flex items-center gap-2 overflow-clip rounded-[10px] pr-2.5 py-2.5 shadow-[0px_1px_2px_0px_rgba(10,13,20,0.03)]">
+                    <input className="w-full flex-1 bg-transparent text-[14px] text-[#0e121b] placeholder-[#99a0ae] outline-none" placeholder="Search Destination" />
+                  </div>
+                </div>
+                <div className="hidden h-8 items-center justify-center md:flex">
+                  <div className="-rotate-90">
+                    <div className="flex h-0 w-8 items-center justify-center gap-2">
+                      <ContentDivider />
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <label className="mb-1 block text-[14px] font-medium tracking-[-0.084px] text-[#0e121b]">Type</label>
+                  <div className="flex items-center gap-2 overflow-clip rounded-[10px] pr-2.5 py-2.5 shadow-[0px_1px_2px_0px_rgba(10,13,20,0.03)]">
+                    <span className="text-[14px] text-[#0e121b]">3 BHK</span>
+                    <span className="size-5 shrink-0" />
+                  </div>
+                </div>
+                <div className="flex justify-end">
+                  <button className="size-10 shrink-0 rounded-full bg-[#0062e0] p-2" aria-label="Search" />
                 </div>
               </div>
             </div>
-            <div className="flex-1">
-              <label className="mb-1 block text-[14px] font-medium tracking-[-0.084px] text-[#0e121b]">Search</label>
-              <div className="flex items-center gap-2 overflow-clip rounded-[10px] pr-2.5 py-2.5 shadow-[0px_1px_2px_0px_rgba(10,13,20,0.03)]">
-                <span className="flex-1 text-[14px] text-[#99a0ae]">Search Destination</span>
-              </div>
-            </div>
-            <div className="flex h-8 w-0 items-center justify-center">
-              <div className="-rotate-90">
-                <div className="flex h-0 w-8 items-center justify-center gap-2">
-                  <ContentDivider />
-                </div>
-              </div>
-            </div>
-            <div className="w-[200px]">
-              <label className="mb-1 block text-[14px] font-medium tracking-[-0.084px] text-[#0e121b]">Type</label>
-              <div className="flex items-center gap-2 overflow-clip rounded-[10px] pr-2.5 py-2.5 shadow-[0px_1px_2px_0px_rgba(10,13,20,0.03)]">
-                <span className="text-[14px] text-[#0e121b]">3 BHK</span>
-                <span className="size-5 shrink-0" />
-              </div>
-            </div>
-            <button className="size-10 shrink-0 rounded-full bg-[#0062e0] p-2" aria-label="Search" />
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

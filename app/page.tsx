@@ -35,24 +35,12 @@ export default function Home() {
   ];
 
   return (
-    <div className="relative rounded-[30px] bg-white">
+    <main className="min-h-screen w-full bg-white">
       <Topbar />
-
-      <div className="absolute left-2.5 top-2.5">
-        <HeroSearch />
-      </div>
-
-      <div className="absolute left-40 top-[609px]">
-        <PropertyGridSection title="Popular Properties in Kochi" cards={kochiCards} />
-      </div>
-
-      <div className="absolute left-40 top-[1465px]">
-        <PropertyGridSection title="Popular Properties in Pune" cards={puneCards} />
-      </div>
-
-      <div className="absolute left-2.5 top-[2361px]">
-        <FooterCTA />
-      </div>
-    </div>
+      <HeroSearch />
+      <PropertyGridSection title="Popular Properties in Kochi" cards={kochiCards} />
+      <PropertyGridSection title="Popular Properties in Pune" cards={puneCards} />
+      <FooterCTA />
+    </main>
   );
 }
