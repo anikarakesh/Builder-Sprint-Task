@@ -6,9 +6,9 @@ export default function FeatureChips({ items }: { items: Chip[] }) {
   return (
     <div className="flex flex-wrap gap-2">
       {items.map((it, idx) => {
-        const isObj = typeof it !== "string";
-        const label = isObj ? (it as any).label : (it as string);
-        const icon = isObj ? (it as any).icon : null;
+        const isString = typeof it === "string";
+        const label = isString ? it : it.label;
+        const icon = isString ? null : it.icon ?? null;
         return (
           <span
             key={idx}
