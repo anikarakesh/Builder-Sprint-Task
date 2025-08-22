@@ -35,8 +35,8 @@ export default function ImageGallery({ images }: { images: GalleryImage[] }) {
       {/* Thumbnails */}
       <div className="hidden md:grid grid-cols-2 grid-rows-2 gap-3 md:gap-4">
         {thumbs[0] ? (
-          <div className="relative overflow-hidden rounded-[12px] border border-[#e1e4ea]">
-            <div className="relative aspect-[16/10] w-full bg-[#f5f7fa]">
+          <div className="relative overflow-hidden rounded-[12px] border border-[#e1e4ea] h-full col-start-1 row-start-1">
+            <div className="relative h-full w-full bg-[#f5f7fa]">
               <img
                 src={thumbs[0].src}
                 alt={thumbs[0].alt || `Thumbnail 1`}
@@ -46,8 +46,8 @@ export default function ImageGallery({ images }: { images: GalleryImage[] }) {
           </div>
         ) : null}
         {thumbs[1] ? (
-          <div className="relative overflow-hidden rounded-[12px] border border-[#e1e4ea]">
-            <div className="relative aspect-[16/10] w-full bg-[#f5f7fa]">
+          <div className="relative overflow-hidden rounded-[12px] border border-[#e1e4ea] h-full col-start-1 row-start-2">
+            <div className="relative h-full w-full bg-[#f5f7fa]">
               <img
                 src={thumbs[1].src}
                 alt={thumbs[1].alt || `Thumbnail 2`}
@@ -57,8 +57,8 @@ export default function ImageGallery({ images }: { images: GalleryImage[] }) {
           </div>
         ) : null}
         {thumbs[2] ? (
-          <div className="relative overflow-hidden rounded-[12px] border border-[#e1e4ea] row-span-2">
-            <div className="relative aspect-[9/16] md:aspect-[9/16] w-full bg-[#f5f7fa]">
+          <div className="relative overflow-hidden rounded-[12px] border border-[#e1e4ea] h-full row-span-2 col-start-2">
+            <div className="relative h-full w-full bg-[#f5f7fa]">
               <img
                 src={thumbs[2].src}
                 alt={thumbs[2].alt || `Thumbnail 3`}
