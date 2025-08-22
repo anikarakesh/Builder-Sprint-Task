@@ -12,7 +12,7 @@ export default function Topbar() {
           </div>
           <nav className="hidden items-center justify-center gap-1 sm:flex">
             <a className="rounded-lg px-3 py-2 text-[14px] font-medium tracking-[-0.084px] text-[#335cff]" href="#">Projects</a>
-            <a className="rounded-lg px-3 py-2 text-[14px] font-medium tracking-[-0.084px] text-[#838383] opacity-80" href="#">Builders</a>
+            <a className="rounded-lg px-3 py-2 text-[14px] font-medium tracking-[-0.084px] text-[#838383] opacity-80" href="/builders">Builders</a>
             <a className="rounded-lg px-3 py-2 text-[14px] font-medium tracking-[-0.084px] text-[#838383] opacity-80" href="#">Partner with Us</a>
           </nav>
         </div>

@@ -5,3 +5,5 @@ choose gpt-5 high model in cursor
 1:10 finished the homepage UI
 
 7:55 am started on builder project details
+8:39 am completed on the rest of the pages
+12:08 starting deployment
