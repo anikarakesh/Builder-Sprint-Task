@@ -1,7 +1,8 @@
 import React from "react";
 
-const imgVector = "http://localhost:3845/assets/295398bf5b77192b5e472c9945fe6d197639d0b2.svg";
-const imgVector1 = "http://localhost:3845/assets/3318315d3f707dbca355a1f5c71eb9273585026f.svg";
+
+const imgVector = "/2.svg";
+const imgVector1 = "/1.svg";
 
 export default function PhoenixLogo() {
   return (

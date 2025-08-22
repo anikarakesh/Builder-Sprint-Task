@@ -10,12 +10,12 @@ import NeighbourhoodSection from "../../components/NeighbourhoodSection";
 import PropertyGridSection from "../../components/PropertyGridSection";
 import FooterCTA from "../../components/FooterCTA";
 
-const imgRectangle14 = "http://localhost:3845/assets/1ae110579b4d78c5f313e1bbab2feb169259531e.png";
-const imgRectangle15 = "http://localhost:3845/assets/49b3ad2d452071eee8c4b639648371eb7b1df630.png";
-const imgRectangle16 = "http://localhost:3845/assets/5c1e600f87b491879be3f7fccd1ab8925328a361.png";
-const imgRectangle17 = "http://localhost:3845/assets/238fdda7d30386fc3a8d8cc71f264be82ab4e561.png";
-const imgImage2 = "http://localhost:3845/assets/339ba5b9954d99620e7b5a7c7dd19c8b35ca23b9.png";
-const imgImage1 = "http://localhost:3845/assets/3aa6019dab066998985ae5491f082afb93c9779b.png";
+const imgRectangle14 = "/1.png";
+const imgRectangle15 = "/2.png";
+const imgRectangle16 = "/3.png";
+const imgRectangle17 = "/4.png";
+const imgImage2 = "/5.png";
+const imgImage1 = "/6.png";
 
 export default function Home() {
   const kochiCards = [
@@ -63,36 +63,31 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Gallery + Contact */}
+      {/* Gallery */}
       <section className="w-full">
         <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-[1fr_320px]">
-            <ImageGallery
-              images={[
-                { src: imgRectangle14 },
-                { src: imgRectangle15 },
-                { src: imgRectangle16, withPlay: true },
-                { src: imgRectangle17 },
-              ]}
-            />
-            <div className="md:pl-2">
-              <ContactCard price="₹3.75 Cr" />
-            </div>
-          </div>
+          <ImageGallery
+            images={[
+              { src: imgRectangle14 },
+              { src: imgRectangle15 },
+              { src: imgRectangle16, withPlay: true },
+              { src: imgRectangle17 },
+            ]}
+          />
         </div>
       </section>
 
-      {/* Description + Attributes */}
+      {/* Description + Attributes + Contact */}
       <section className="w-full py-6">
         <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-[1fr_320px]">
             <div>
               <p className="text-[14px] leading-6 text-[#525866]">
-                Craft your new way of living. Polished, elegant interiors with double-height spaces. Homes crafted at Cove create cheery, cozy spaces and invite ample daylight and fresh air.
+                Craft your own piece of majestic living beneath the clouds. It is exceptionally unique and available only through exclusive invitation.
               </p>
               <div className="mt-4">
                 <FeatureChips
-                  items={["3 BHK", "2 Car Parks", "84% Open", "East Facing", "Sea View"]}
+                  items={["8795 Sqft", "17 acres", "85% Open", "03 Bath", "Gym", "80+ More"]}
                 />
               </div>
               <div className="mt-6">
@@ -101,14 +96,16 @@ export default function Home() {
                     { label: "Configuration", value: "3 BHK" },
                     { label: "Status", value: "New" },
                     { label: "Car Parking", value: "2" },
-                    { label: "Possession", value: "Dec 2026" },
+                    { label: "Possession", value: "Jan 2025" },
                     { label: "RERA", value: "Approved" },
                     { label: "Area", value: "1,640 sq.ft" },
                   ]}
                 />
               </div>
             </div>
-            <div />
+            <div className="md:pl-2">
+              <ContactCard price="₹3.75 Cr" />
+            </div>
           </div>
         </div>
       </section>
@@ -116,14 +113,16 @@ export default function Home() {
       {/* Neighbourhood */}
       <section className="w-full py-4">
         <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
-          <NeighbourhoodSection
-            places={[
-              { name: "Hosa Road Metro", distance: "1.1 km" },
-              { name: "Royal Meenakshi Mall", distance: "2.6 km" },
-              { name: "Fortis Hospital", distance: "2.0 km" },
-              { name: "Bommanahalli Main Junction", distance: "2.9 km" },
-            ]}
-          />
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-[1fr_320px]">
+            <NeighbourhoodSection
+              places={[
+                { name: "Yelachenahalli Metro Station", distance: "14 mins (13.2 kms)" },
+                { name: "Jaya Prakash Nagar Metro Station", distance: "23.5 mins (16.4 kms)" },
+                { name: "Bommasandra Metro Station", distance: "08 mins (5.2 kms)" },
+              ]}
+            />
+            <div className="hidden md:block" />
+          </div>
         </div>
       </section>
 

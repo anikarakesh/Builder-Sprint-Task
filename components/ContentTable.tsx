@@ -12,7 +12,7 @@ type Row = {
   status: "Active" | "Completed";
 };
 
-const img = "http://localhost:3845/assets/1ae110579b4d78c5f313e1bbab2feb169259531e.png";
+const img = "/1.png";
 
 export const contentRows: Row[] = Array.from({ length: 11 }).map((_, i) => ({
   avatar: img,

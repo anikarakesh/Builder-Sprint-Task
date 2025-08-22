@@ -4,12 +4,12 @@ import HeroSearch from "../components/HeroSearch";
 import PropertyGridSection from "../components/PropertyGridSection";
 import FooterCTA from "../components/FooterCTA";
 
-const imgRectangle14 = "http://localhost:3845/assets/1ae110579b4d78c5f313e1bbab2feb169259531e.png";
-const imgRectangle15 = "http://localhost:3845/assets/49b3ad2d452071eee8c4b639648371eb7b1df630.png";
-const imgRectangle16 = "http://localhost:3845/assets/5c1e600f87b491879be3f7fccd1ab8925328a361.png";
-const imgRectangle17 = "http://localhost:3845/assets/238fdda7d30386fc3a8d8cc71f264be82ab4e561.png";
-const imgImage2 = "http://localhost:3845/assets/339ba5b9954d99620e7b5a7c7dd19c8b35ca23b9.png";
-const imgImage1 = "http://localhost:3845/assets/3aa6019dab066998985ae5491f082afb93c9779b.png";
+const imgRectangle14 = "/1.png";
+const imgRectangle15 = "/2.png";
+const imgRectangle16 = "/3.png";
+const imgRectangle17 = "/4.png";
+const imgImage2 = "/5.png";
+const imgImage1 = "/6.png";
 
 export default function Home() {
   const kochiCards = [

@@ -5,9 +5,9 @@ type Props = {
   onClose: () => void;
 };
 
-const img1 = "http://localhost:3845/assets/dde0c408dd3caa69db9e4633b12904a0d351a2af.png";
-const img2 = "http://localhost:3845/assets/42685c46c278b54fd7f72b9ea14900173508dee6.png";
-const img3 = "http://localhost:3845/assets/d133f05a44a09deb955a1b590c58e641313932a9.png";
+const img1 = "/1.png";
+const img2 = "/2.png";
+const img3 = "/3.png";
 
 export default function ListingPreviewDrawer({ open, onClose }: Props) {
   return (

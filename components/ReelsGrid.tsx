@@ -1,7 +1,7 @@
 import React from "react";
 
-const img1 = "http://localhost:3845/assets/be088e0ad030d2abc3afffb864c8fe39134aaf89.png";
-const img2 = "http://localhost:3845/assets/dbf76db98df2e30b9ba65c68c1ab91033dd914c7.png";
+const img1 = "/7.png";
+const img2 = "/8.png";
 
 export default function ReelsGrid() {
   return (
