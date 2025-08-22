@@ -24,8 +24,8 @@ const mainItems: NavItem[] = [
 ];
 
 const supportItems: NavItem[] = [
-  { key: "settings", label: "Settings", icon: <IconSettings className="text-neutral-600" /> },
-  { key: "support", label: "Support", icon: <IconHeadphones className="text-neutral-600" /> },
+  { key: "settings", label: "Settings", icon: <IconSettings className="text-neutral-600" />, href: "/builders/settings" },
+  { key: "support", label: "Support", icon: <IconHeadphones className="text-neutral-600" />, href: "/builders/support" },
 ];
 
 export default function BuilderSidebar() {
