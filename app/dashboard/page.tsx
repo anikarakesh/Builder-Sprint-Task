@@ -1,11 +1,11 @@
 import React from "react";
-import BuilderSidebar from "../../../components/BuilderSidebar";
-import DashboardHeader from "../../../components/DashboardHeader";
-import StatCard from "../../../components/StatCard";
-import LineChartCard from "../../../components/LineChartCard";
-import TopPerformersCard from "../../../components/TopPerformersCard";
-import ReelsGrid from "../../../components/ReelsGrid";
-import { IconEye, IconThumbUp, IconMouse } from "../../../components/icons";
+import BuilderSidebar from "../../components/BuilderSidebar";
+import DashboardHeader from "../../components/DashboardHeader";
+import StatCard from "../../components/StatCard";
+import LineChartCard from "../../components/LineChartCard";
+import TopPerformersCard from "../../components/TopPerformersCard";
+import ReelsGrid from "../../components/ReelsGrid";
+import { IconEye, IconThumbUp, IconMouse } from "../../components/icons";
 
 export default function DashboardPage() {
   return (
