@@ -3,6 +3,7 @@ import React, { useCallback, useState } from "react";
 import PhoenixLogo from "./PhoenixLogo";
 import { useRouter } from "next/navigation";
 import { IconBell, IconChevronDown, IconSearch } from "./icons";
+import Link from "next/link";
 
 export default function ProjectsTopbar() {
   const router = useRouter();
@@ -30,11 +31,13 @@ export default function ProjectsTopbar() {
       <div className="mx-auto flex max-w-screen-2xl items-center justify-between gap-4 px-4 py-4 md:px-8 md:py-5">
         {/* Left: Logo */}
         <div className="flex items-center gap-3">
-          <div className="size-10 shrink-0 overflow-clip rounded-xl bg-[#0b0b0b] ring-1 ring-[#1a1a1a]">
-            <PhoenixLogo />
-          </div>
+          <Link href="/">
+            <div className="size-10 shrink-0 overflow-clip rounded-xl bg-[#0b0b0b] ring-1 ring-[#1a1a1a]">
+              <PhoenixLogo />
+            </div>
+          </Link>
         </div>
-
+    
         {/* Center: Search pill */}
         <div className="hidden md:flex flex-1 items-center justify-center">
           <div className="w-full max-w-4xl rounded-[87px] border border-[#e1e4ea] bg-white px-3 py-2 shadow-[0px_21px_43px_0px_rgba(0,0,0,0.1)]">
