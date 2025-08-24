@@ -1,5 +1,10 @@
 # Project Timeline
 
+**Note**
+
+I am not interested in building UI, more focused on the backend and LLM integrations.
+
+
 ## August 22, 2025
 
 - **12:08 am** – Started working on the project.
