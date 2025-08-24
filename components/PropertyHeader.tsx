@@ -1,4 +1,5 @@
 import React from "react";
+import { IconShare } from "./icons";
 
 export default function PropertyHeader({
   title,
@@ -26,10 +27,15 @@ export default function PropertyHeader({
         </div>
       </div>
       <div className="hidden md:flex items-center gap-2">
-        <button className="rounded-full border border-[#e1e4ea] px-3 py-1.5 text-[13px] text-[#0e121b] hover:bg-[#f5f7fa]">
+        <button className="flex items-center gap-1   px-3 py-1.5 text-[13px] text-[#0e121b] hover:bg-[#f5f7fa]">
+          <IconShare className="size-4 text-[#838383]" />
           Share
         </button>
-        <button className="rounded-full border border-[#e1e4ea] px-3 py-1.5 text-[13px] text-[#0e121b] hover:bg-[#f5f7fa]">
+        <button className="flex items-center gap-1   px-3 py-1.5 text-[13px] text-[#0e121b] hover:bg-[#f5f7fa]">
+          {/* Bookmark Logo */}
+          <svg className="size-4 text-[#838383]" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M6 4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16l-7-5-7 5V4z" />
+          </svg>
           Bookmark
         </button>
       </div>

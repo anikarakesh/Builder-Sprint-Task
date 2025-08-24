@@ -1,13 +1,19 @@
 "use client";
-import React, { useCallback, useMemo, useState } from "react";
+import React, { useCallback, useState } from "react";
 import PhoenixLogo from "./PhoenixLogo";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function Topbar() {
   const router = useRouter();
+  const pathname = usePathname();
   const [city, setCity] = useState<string>("Bengaluru");
   const [query, setQuery] = useState<string>("");
+
+  const isActive = useCallback(
+    (href: string) => pathname.startsWith(href),
+    [pathname]
+  );
 
   const runSearch = useCallback(() => {
     const params = new URLSearchParams();
@@ -32,9 +38,24 @@ export default function Topbar() {
             </div>
           </Link>
           <nav className="hidden items-center justify-center gap-1 sm:flex">
-            <Link className="rounded-lg px-3 py-2 text-[14px] font-medium tracking-[-0.084px] text-[#335cff]" href="/projects">Projects</Link>
-            <Link className="rounded-lg px-3 py-2 text-[14px] font-medium tracking-[-0.084px] text-[#838383] opacity-80" href="/dashboard">Builders</Link>
-            <Link className="rounded-lg px-3 py-2 text*[14px] font-medium tracking-[-0.084px] text-[#838383] opacity-80" href="/partner">Partner with Us</Link>
+            <Link
+              className={`rounded-lg px-3 py-2 text-[14px] font-medium tracking-[-0.084px] ${isActive("/projects") ? "text-[#335cff]" : "text-[#838383] opacity-80"}`}
+              href="/projects"
+            >
+              Projects
+            </Link>
+            <Link
+              className={`rounded-lg px-3 py-2 text-[14px] font-medium tracking-[-0.084px] ${isActive("/dashboard") ? "text-[#335cff]" : "text-[#838383] opacity-80"}`}
+              href="/dashboard"
+            >
+              Builders
+            </Link>
+            <Link
+              className={`rounded-lg px-3 py-2 text-[14px] font-medium tracking-[-0.084px] ${isActive("/partner") ? "text-[#335cff]" : "text-[#838383] opacity-80"}`}
+              href="/partner"
+            >
+              Partner with Us
+            </Link>
           </nav>
         </div>
 
@@ -75,8 +96,18 @@ export default function Topbar() {
         </div>
 
         <div className="hidden items-center justify-start gap-4 sm:flex">
-          <Link href="/create-account" className="text-[14px] font-medium tracking-[-0.084px] text-[#838383]">Create Account</Link>
-          <Link href="/login" className="text-[14px] font-medium tracking-[-0.084px] text-[#838383]">Login</Link>
+          <Link
+            href="/create-account"
+            className={`text-[14px] font-medium tracking-[-0.084px] ${isActive("/create-account") ? "text-[#335cff]" : "text-[#838383] opacity-80"}`}
+          >
+            Create Account
+          </Link>
+          <Link
+            href="/login"
+            className={`text-[14px] font-medium tracking-[-0.084px] ${isActive("/login") ? "text-[#335cff]" : "text-[#838383] opacity-80"}`}
+          >
+            Login
+          </Link>
         </div>
       </div>
     </header>

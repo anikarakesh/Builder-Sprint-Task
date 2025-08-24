@@ -1,5 +1,6 @@
 import React from "react";
 import Topbar from "../../components/Topbar";
+import ProjectsTopbar from "../../components/ProjectsTopbar";
 import Breadcrumbs from "../../components/Breadcrumbs";
 import PropertyHeader from "../../components/PropertyHeader";
 import ImageGallery from "../../components/ImageGallery";
@@ -42,7 +43,9 @@ export default function Home() {
 
   return (
     <main className="min-h-screen w-full bg-white">
-      <Topbar />
+      <ProjectsTopbar />
+      
+
 
       {/* Property Detail Header */}
       <section className="w-full">

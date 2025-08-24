@@ -60,7 +60,7 @@ const TABS: Tab[] = [
 export default function NeighbourhoodSection({
   places,
   tabbedPlaces = {},
-  mapImageUrl = "https://maps.gstatic.com/tactile/pane/default_geocode-1x.png",
+  mapImageUrl = "/map.png",
   description =
     "Claim your own piece of majestic living beneath the clouds. Welcome aboard Green Clouds, Kerala’s First Biophilic Sky Bungalows by Veegaland Homes. It is exceptionally unique and available only through exclusive invitation. These homes are designed for a discerning community of families who prioritise life, luxury and nature.",
   amenities: inputAmenities,
