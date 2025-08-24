@@ -13,7 +13,7 @@ export default function Topbar() {
     const params = new URLSearchParams();
     if (city) params.set("city", city);
     if (query.trim()) params.set("q", query.trim());
-    router.push(`/projects${params.toString() ? `?${params.toString()}` : ""}`);
+    router.push(`/projects/browse${params.toString() ? `?${params.toString()}` : ""}`);
   }, [router, city, query]);
 
   const onKeyDown = useCallback((e: React.KeyboardEvent<HTMLInputElement>) => {

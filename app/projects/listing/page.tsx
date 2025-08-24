@@ -40,6 +40,8 @@ export default function ListingPage() {
               platformFilter={platformFilter}
               onPlatformFilterChange={setPlatformFilter}
               query={query}
+              onView={(row) => alert(`Viewing ${row.name}`)}
+              onEdit={(row) => alert(`Editing ${row.name}`)}
               onSelect={(_, idx) => {
                 setSelectedIndex(idx);
                 setOpen(true);

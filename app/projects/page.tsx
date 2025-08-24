@@ -77,6 +77,22 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Actions + Config filters */}
+      <section className="w-full py-4">
+        <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
+          <div className="flex items-center gap-3">
+            <button className="rounded-[10px] border border-[#e1e4ea] px-3 py-2 text-[14px]">Call</button>
+            <button className="rounded-[10px] border border-[#e1e4ea] px-3 py-2 text-[14px]">Schedule Visit</button>
+            <button className="rounded-[10px] border border-[#e1e4ea] px-3 py-2 text-[14px]">Download Brochure</button>
+          </div>
+          <div className="mt-3 flex flex-wrap gap-2">
+            {['1 BHK', '2 BHK', '3 BHK', '4 BHK'].map((c, idx) => (
+              <button key={c} className={"rounded-[10px] border px-3 py-1.5 text-[12px] " + (idx === 2 ? "border-[#e1e4ea] bg-[#f5f7fa] text-[#0e121b]" : "border-[#e1e4ea] bg-white text-[#525866]")}>{c}</button>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Description + Attributes + Contact */}
       <section className="w-full py-6">
         <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
@@ -128,6 +144,7 @@ export default function Home() {
 
       {/* Popular Properties */}
       <PropertyGridSection title="Popular Properties in Pune" cards={puneCards} />
+      <PropertyGridSection title="Popular Properties in Kochi" cards={kochiCards} />
       <FooterCTA />
     </main>
   );

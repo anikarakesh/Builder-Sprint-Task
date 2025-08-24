@@ -1,6 +1,6 @@
 import React from "react";
 
-const img1 = "/7.png";
+const img1 = "/9.png";
 const img2 = "/8.png";
 
 export default function ReelsGrid() {

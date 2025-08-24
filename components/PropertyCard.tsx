@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 type PropertyCardProps = {
   imageUrl: string;
@@ -10,7 +11,7 @@ type PropertyCardProps = {
 
 export default function PropertyCard({ imageUrl, badgeLogoUrl, location, title, price }: PropertyCardProps) {
   return (
-    <div className="relative w-full rounded-lg bg-white">
+    <Link href="/projects" className="relative w-full rounded-lg bg-white block">
       <div className="relative w-full overflow-clip">
         <div className="w-full px-2 pb-0 pt-2">
           <div className="w-full rounded-lg bg-cover bg-center h-40 sm:h-44 md:h-48 lg:h-[180px]" style={{ backgroundImage: `url('${imageUrl}')` }} />
@@ -35,7 +36,7 @@ export default function PropertyCard({ imageUrl, badgeLogoUrl, location, title, 
         </div>
       </div>
       <div aria-hidden className="pointer-events-none absolute inset-[-1px] rounded-[9px] border border-[#e7e7e7]" />
-    </div>
+    </Link>
   );
 }
 

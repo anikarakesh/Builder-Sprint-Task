@@ -1,5 +1,5 @@
 "use client";
-import React, { useMemo } from "react";
+import React, { useMemo, useState } from "react";
 import { IconKebab } from "./icons";
 
 type Row = {
@@ -35,6 +35,8 @@ export default function ContentTable({
   query = "",
   platformFilter = "All",
   onPlatformFilterChange,
+  onView,
+  onEdit,
 }: {
   selectedIndex?: number | null;
   onSelect?: ContentTableOnSelect;
@@ -42,15 +44,45 @@ export default function ContentTable({
   query?: string;
   platformFilter?: PlatformFilter;
   onPlatformFilterChange?: (v: PlatformFilter) => void;
+  onView?: (row: Row, index: number) => void;
+  onEdit?: (row: Row, index: number) => void;
 }) {
+  const [sortKey, setSortKey] = useState<keyof Pick<Row, "name" | "views" | "likes" | "interactions">>("name");
+  const [sortDir, setSortDir] = useState<"asc" | "desc">("asc");
+
   const filteredRows = useMemo(() => {
     const q = query.trim().toLowerCase();
-    return rows.filter((r) => {
+    const res = rows.filter((r) => {
       const matchesQuery = !q || r.name.toLowerCase().includes(q);
       const matchesPlatform = platformFilter === "All" || r.platform === platformFilter;
       return matchesQuery && matchesPlatform;
     });
-  }, [rows, query, platformFilter]);
+    const toNumber = (v: string): number => {
+      const m = /([\d.]+)\s*(M|K)?/i.exec(v);
+      if (!m) return 0;
+      const n = parseFloat(m[1] || "0");
+      const unit = (m[2] || "").toUpperCase();
+      if (unit === "M") return n * 1_000_000;
+      if (unit === "K") return n * 1_000;
+      return n;
+    };
+    const sorted = [...res].sort((a, b) => {
+      let av: number | string = a[sortKey] as any;
+      let bv: number | string = b[sortKey] as any;
+      if (sortKey !== "name") {
+        av = toNumber(String(av));
+        bv = toNumber(String(bv));
+      }
+      const cmp = av < bv ? -1 : av > bv ? 1 : 0;
+      return sortDir === "asc" ? cmp : -cmp;
+    });
+    return sorted;
+  }, [rows, query, platformFilter, sortKey, sortDir]);
+
+  const setSort = (key: typeof sortKey) => {
+    setSortDir((d) => (key === sortKey ? (d === "asc" ? "desc" : "asc") : "asc"));
+    setSortKey(key);
+  };
   return (
     <div className="bg-white rounded-2xl border border-[#ebebeb] shadow-sm">
       <div className="flex items-center gap-2 px-4 py-3 border-b border-[#ebebeb]">
@@ -74,11 +106,11 @@ export default function ContentTable({
         <table className="w-full text-left">
           <thead className="text-[12px] text-[#5c5c5c]">
             <tr className="border-b border-[#ebebeb]">
-              <th className="px-4 py-2">Instructor</th>
+              <th className="px-4 py-2 cursor-pointer" onClick={() => setSort("name")}>Instructor</th>
               <th className="px-4 py-2">Platform</th>
-              <th className="px-4 py-2">Views</th>
-              <th className="px-4 py-2">Likes</th>
-              <th className="px-4 py-2">Interactions</th>
+              <th className="px-4 py-2 cursor-pointer" onClick={() => setSort("views")}>Views</th>
+              <th className="px-4 py-2 cursor-pointer" onClick={() => setSort("likes")}>Likes</th>
+              <th className="px-4 py-2 cursor-pointer" onClick={() => setSort("interactions")}>Interactions</th>
               <th className="px-4 py-2">Status</th>
               <th className="px-4 py-2" />
             </tr>
@@ -113,9 +145,13 @@ export default function ContentTable({
                   </span>
                 </td>
                 <td className="px-4 py-2 text-right">
-                  <button className="text-[#5c5c5c]">
-                    <IconKebab />
-                  </button>
+                  <div className="inline-flex items-center gap-2">
+                    <button type="button" onClick={(e) => { e.stopPropagation(); onView?.(r, idx); }} className="text-[12px] text-[#335cff]">View</button>
+                    <button type="button" onClick={(e) => { e.stopPropagation(); onEdit?.(r, idx); }} className="text-[12px] text-[#525866]">Edit</button>
+                    <button className="text-[#5c5c5c]" onClick={(e) => e.stopPropagation()} aria-label="More">
+                      <IconKebab />
+                    </button>
+                  </div>
                 </td>
               </tr>
             );})}

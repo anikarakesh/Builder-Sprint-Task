@@ -56,7 +56,7 @@ export default function HeroSearch() {
     if (query.trim()) params.set("q", query.trim());
     if (type) params.set("type", type);
     if (activeTab) params.set("tab", activeTab);
-    router.push(`/projects${params.toString() ? `?${params.toString()}` : ""}`);
+    router.push(`/projects/browse${params.toString() ? `?${params.toString()}` : ""}`);
   }, [router, city, query, type, activeTab]);
 
   const onKeyDown = useCallback((e: React.KeyboardEvent<HTMLInputElement>) => {

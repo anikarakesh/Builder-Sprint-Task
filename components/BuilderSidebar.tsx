@@ -35,7 +35,7 @@ export default function BuilderSidebar() {
     <aside className="bg-white w-[272px] border-r border-[#ebebeb] min-h-screen flex flex-col">
       <div className="px-3 py-3">
         <div className="relative">
-          <button onClick={() => setOpenOrgMenu((v) => !v)} className="w-full text-left">
+          <Link href="/" className="w-full text-left">
             <div className="flex items-center gap-3 rounded-[10px] p-3 hover:bg-[#f7f7f7]">
               <div className="size-10 rounded-full bg-[#7d52f4] overflow-clip">
                 <PhoenixLogo />
@@ -49,14 +49,14 @@ export default function BuilderSidebar() {
                 </svg>
               </span>
             </div>
-          </button>
-          {openOrgMenu && (
+          </Link>
+          {/* {openOrgMenu && (
             <div className="absolute left-2 right-2 mt-1 rounded-[10px] border border-[#ebebeb] bg-white shadow-lg z-10">
               <Link href="/" className="block px-3 py-2 text-[14px] hover:bg-[#f7f7f7]">Home</Link>
               <Link href="/dashboard" className="block px-3 py-2 text-[14px] hover:bg-[#f7f7f7]">Dashboard</Link>
               <Link href="/projects/listing" className="block px-3 py-2 text-[14px] hover:bg-[#f7f7f7]">Listing</Link>
             </div>
-          )}
+          )} */}
         </div>
       </div>
 
