@@ -1,12 +1,12 @@
 "use client";
-import React, { useMemo, useState } from "react";
+import React, { Suspense, useMemo, useState } from "react";
 import BuilderSidebar from "../../../components/BuilderSidebar";
 import ListingHeader from "../../../components/ListingHeader";
 import ContentTable, { contentRows, type PlatformFilter } from "../../../components/ContentTable";
 import ListingPreviewDrawer from "../../../components/ListingPreviewDrawer";
 import { useSearchParams } from "next/navigation";
 
-export default function ListingPage() {
+function ListingPageContent() {
   const params = useSearchParams();
   const initialQuery = params?.get("q") || "";
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
@@ -53,6 +53,14 @@ export default function ListingPage() {
       <ListingPreviewDrawer open={open} onClose={() => setOpen(false)} selected={selectedRow}
       />
     </div>
+  );
+}
+
+export default function ListingPage() {
+  return (
+    <Suspense fallback={null}>
+      <ListingPageContent />
+    </Suspense>
   );
 }
 
