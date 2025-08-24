@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useMemo } from "react";
 import { IconKebab } from "./icons";
 
 type Row = {
@@ -26,7 +26,31 @@ export const contentRows: Row[] = Array.from({ length: 11 }).map((_, i) => ({
 
 export type ContentTableOnSelect = (row: Row | null, index: number | null) => void;
 
-export default function ContentTable({ selectedIndex, onSelect }: { selectedIndex?: number | null; onSelect?: ContentTableOnSelect }) {
+export type PlatformFilter = "All" | Row["platform"];
+
+export default function ContentTable({
+  selectedIndex,
+  onSelect,
+  rows = contentRows,
+  query = "",
+  platformFilter = "All",
+  onPlatformFilterChange,
+}: {
+  selectedIndex?: number | null;
+  onSelect?: ContentTableOnSelect;
+  rows?: Row[];
+  query?: string;
+  platformFilter?: PlatformFilter;
+  onPlatformFilterChange?: (v: PlatformFilter) => void;
+}) {
+  const filteredRows = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    return rows.filter((r) => {
+      const matchesQuery = !q || r.name.toLowerCase().includes(q);
+      const matchesPlatform = platformFilter === "All" || r.platform === platformFilter;
+      return matchesQuery && matchesPlatform;
+    });
+  }, [rows, query, platformFilter]);
   return (
     <div className="bg-white rounded-2xl border border-[#ebebeb] shadow-sm">
       <div className="flex items-center gap-2 px-4 py-3 border-b border-[#ebebeb]">
@@ -35,8 +59,14 @@ export default function ContentTable({ selectedIndex, onSelect }: { selectedInde
         </div>
         <div className="text-[14px] font-medium">Content</div>
         <div className="ml-auto">
-          <select className="text-[14px] border border-[#ebebeb] rounded-lg px-2.5 py-1.5 shadow-sm">
-            <option>All Platforms</option>
+          <select
+            value={platformFilter}
+            onChange={(e) => onPlatformFilterChange?.(e.target.value as PlatformFilter)}
+            className="text-[14px] border border-[#ebebeb] rounded-lg px-2.5 py-1.5 shadow-sm"
+          >
+            <option value="All">All Platforms</option>
+            <option value="Instagram">Instagram</option>
+            <option value="Youtube">Youtube</option>
           </select>
         </div>
       </div>
@@ -54,7 +84,7 @@ export default function ContentTable({ selectedIndex, onSelect }: { selectedInde
             </tr>
           </thead>
           <tbody className="text-[14px]">
-            {contentRows.map((r, idx) => {
+            {filteredRows.map((r, idx) => {
               const active = selectedIndex === idx;
               return (
               <tr key={idx} className={"border-b border-[#ebebeb] cursor-pointer " + (active ? "bg-[#f7f7f7]" : "hover:bg-[#f7f7f7]")} onClick={() => onSelect && onSelect(r, idx)}>

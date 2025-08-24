@@ -1,9 +1,27 @@
 "use client";
-import React from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import PhoenixLogo from "./PhoenixLogo";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function Topbar() {
+  const router = useRouter();
+  const [city, setCity] = useState<string>("Bengaluru");
+  const [query, setQuery] = useState<string>("");
+
+  const runSearch = useCallback(() => {
+    const params = new URLSearchParams();
+    if (city) params.set("city", city);
+    if (query.trim()) params.set("q", query.trim());
+    router.push(`/projects${params.toString() ? `?${params.toString()}` : ""}`);
+  }, [router, city, query]);
+
+  const onKeyDown = useCallback((e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      runSearch();
+    }
+  }, [runSearch]);
+
   return (
     <header className="w-full">
       <div className="mx-auto flex max-w-screen-2xl items-center justify-between gap-4 px-4 py-4 md:px-8">
@@ -14,9 +32,9 @@ export default function Topbar() {
             </div>
           </Link>
           <nav className="hidden items-center justify-center gap-1 sm:flex">
-            <a className="rounded-lg px-3 py-2 text-[14px] font-medium tracking-[-0.084px] text-[#335cff]" href="/projects">Projects</a>
-            <a className="rounded-lg px-3 py-2 text-[14px] font-medium tracking-[-0.084px] text-[#838383] opacity-80" href="/dashboard">Builders</a>
-            <a className="rounded-lg px-3 py-2 text-[14px] font-medium tracking-[-0.084px] text-[#838383] opacity-80" href="#">Partner with Us</a>
+            <Link className="rounded-lg px-3 py-2 text-[14px] font-medium tracking-[-0.084px] text-[#335cff]" href="/projects">Projects</Link>
+            <Link className="rounded-lg px-3 py-2 text-[14px] font-medium tracking-[-0.084px] text-[#838383] opacity-80" href="/dashboard">Builders</Link>
+            <Link className="rounded-lg px-3 py-2 text*[14px] font-medium tracking-[-0.084px] text-[#838383] opacity-80" href="/partner">Partner with Us</Link>
           </nav>
         </div>
 
@@ -25,7 +43,11 @@ export default function Topbar() {
           <div className="w-full max-w-2xl rounded-full border border-[#e1e4ea] bg-white px-3 py-2 shadow-sm">
             <div className="grid grid-cols-[140px_1fr_104px] items-center gap-2">
               <div className="relative">
-                <select className="w-full appearance-none rounded-full bg-transparent px-3 py-2 text-[13px] font-medium text-[#0e121b] outline-none">
+                <select
+                  value={city}
+                  onChange={(e) => setCity(e.target.value)}
+                  className="w-full appearance-none rounded-full bg-transparent px-3 py-2 text-[13px] font-medium text-[#0e121b] outline-none"
+                >
                   <option>Bengaluru</option>
                   <option>Mumbai</option>
                   <option>Delhi</option>
@@ -39,10 +61,13 @@ export default function Topbar() {
                 <input
                   type="text"
                   placeholder="Search Destination, Project..."
+                  value={query}
+                  onChange={(e) => setQuery(e.target.value)}
+                  onKeyDown={onKeyDown}
                   className="w-full bg-transparent text-[13px] text-[#0e121b] placeholder-[#99a0ae] outline-none"
                 />
               </div>
-              <button className="justify-self-end rounded-full bg-[#335cff] px-4 py-2 text-[13px] font-medium text-white hover:bg-[#2749ff]">
+              <button onClick={runSearch} className="justify-self-end rounded-full bg-[#335cff] px-4 py-2 text-[13px] font-medium text-white hover:bg-[#2749ff]">
                 Search
               </button>
             </div>
@@ -50,8 +75,8 @@ export default function Topbar() {
         </div>
 
         <div className="hidden items-center justify-start gap-4 sm:flex">
-          <span className="text-[14px] font-medium tracking-[-0.084px] text-[#838383]">Create Account</span>
-          <span className="text-[14px] font-medium tracking-[-0.084px] text-[#838383]">Login</span>
+          <Link href="/create-account" className="text-[14px] font-medium tracking-[-0.084px] text-[#838383]">Create Account</Link>
+          <Link href="/login" className="text-[14px] font-medium tracking-[-0.084px] text-[#838383]">Login</Link>
         </div>
       </div>
     </header>

@@ -1,5 +1,6 @@
 "use client"
 import React from "react";
+import Link from "next/link";
 
 export default function FooterCTA() {
   return (
@@ -39,9 +40,9 @@ export default function FooterCTA() {
               
               {/* CTA Button */}
               <div className="flex-shrink-0">
-                <button className="bg-[#007bff] hover:bg-[#0056b3] text-white px-8 py-3 rounded-[12px] text-[16px] font-semibold transition-all duration-200 hover:scale-105 hover:shadow-xl shadow-lg">
+                <Link href="/partner" className="bg-[#007bff] hover:bg-[#0056b3] text-white px-8 py-3 rounded-[12px] text-[16px] font-semibold transition-all duration-200 hover:scale-105 hover:shadow-xl shadow-lg">
                   Talk to Us
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -55,15 +56,11 @@ export default function FooterCTA() {
                   DISCOVER
                 </h3>
                 <div className="space-y-4">
-                  {['Home', 'Properties', 'About Us', 'Blog', 'Contact'].map((item) => (
-                    <a 
-                      key={item}
-                      href="#" 
-                      className="block text-[16px] text-[#6c757d] hover:text-[#007bff] transition-colors duration-200"
-                    >
-                      {item}
-                    </a>
-                  ))}
+                  <Link href="/" className="block text-[16px] text-[#6c757d] hover:text-[#007bff] transition-colors duration-200">Home</Link>
+                  <Link href="/projects" className="block text-[16px] text-[#6c757d] hover:text-[#007bff] transition-colors duration-200">Properties</Link>
+                  <Link href="/about" className="block text-[16px] text-[#6c757d] hover:text-[#007bff] transition-colors duration-200">About Us</Link>
+                  <Link href="/blog" className="block text-[16px] text-[#6c757d] hover:text-[#007bff] transition-colors duration-200">Blog</Link>
+                  <Link href="/contact" className="block text-[16px] text-[#6c757d] hover:text-[#007bff] transition-colors duration-200">Contact</Link>
                 </div>
               </div>
 
@@ -73,15 +70,10 @@ export default function FooterCTA() {
                   PROPERTIES
                 </h3>
                 <div className="space-y-4">
-                  {['New Projects', 'Co-Working Space', 'Apartments', 'Holiday Homes'].map((item) => (
-                    <a 
-                      key={item}
-                      href="#" 
-                      className="block text-[16px] text-[#6c757d] hover:text-[#007bff] transition-colors duration-200"
-                    >
-                      {item}
-                    </a>
-                  ))}
+                  <Link href="/properties/new-projects" className="block text-[16px] text-[#6c757d] hover:text-[#007bff] transition-colors duration-200">New Projects</Link>
+                  <Link href="/properties/co-working" className="block text-[16px] text-[#6c757d] hover:text-[#007bff] transition-colors duration-200">Co-Working Space</Link>
+                  <Link href="/properties/apartments" className="block text-[16px] text-[#6c757d] hover:text-[#007bff] transition-colors duration-200">Apartments</Link>
+                  <Link href="/properties/holiday-homes" className="block text-[16px] text-[#6c757d] hover:text-[#007bff] transition-colors duration-200">Holiday Homes</Link>
                 </div>
               </div>
 
@@ -91,15 +83,9 @@ export default function FooterCTA() {
                   SERVICES
                 </h3>
                 <div className="space-y-4">
-                  {['Sell Your Property', 'Rent Your Property', 'Housing Loans'].map((item) => (
-                    <a 
-                      key={item}
-                      href="#" 
-                      className="block text-[16px] text-[#6c757d] hover:text-[#007bff] transition-colors duration-200"
-                    >
-                      {item}
-                    </a>
-                  ))}
+                  <Link href="/services/sell" className="block text-[16px] text-[#6c757d] hover:text-[#007bff] transition-colors duration-200">Sell Your Property</Link>
+                  <Link href="/services/rent" className="block text-[16px] text-[#6c757d] hover:text-[#007bff] transition-colors duration-200">Rent Your Property</Link>
+                  <Link href="/services/loans" className="block text-[16px] text-[#6c757d] hover:text-[#007bff] transition-colors duration-200">Housing Loans</Link>
                 </div>
               </div>
 
@@ -140,18 +126,8 @@ export default function FooterCTA() {
               
               {/* Legal Links */}
               <div className="flex flex-col md:flex-row gap-4 md:gap-8">
-                <a 
-                  href="#" 
-                  className="text-[16px] text-[#6c757d] hover:text-[#007bff] transition-colors duration-200"
-                >
-                  Privacy Policy
-                </a>
-                <a 
-                  href="#" 
-                  className="text-[16px] text-[#6c757d] hover:text-[#007bff] transition-colors duration-200"
-                >
-                  Terms & Conditions
-                </a>
+                <Link href="/privacy" className="text-[16px] text-[#6c757d] hover:text-[#007bff] transition-colors duration-200">Privacy Policy</Link>
+                <Link href="/terms" className="text-[16px] text-[#6c757d] hover:text-[#007bff] transition-colors duration-200">Terms & Conditions</Link>
               </div>
             </div>
           </div>

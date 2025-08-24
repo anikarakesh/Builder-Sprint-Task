@@ -24,3 +24,31 @@
 
 
 ---
+# Project Details
+
+## AI tools
+- Cursor Pro (200$)
+- Figma  MCP
+- GPT-5 High 
+    reason for using this, SOTA model for UI generation
+
+
+## Project Structure
+
+**page links**
+- /
+- /projects
+- /projects/listing
+- /dashboard
+- /projects/settings
+- /projects/support
+
+
+- `app` – Contains the main application code.
+- `components` – Contains the shared components.
+- `public` – Contains the public assets.
+- `styles` – Contains the global styles.
+- `utils` – Contains the utility functions.
+
+
+
