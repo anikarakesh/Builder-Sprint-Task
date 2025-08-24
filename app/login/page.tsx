@@ -29,7 +29,7 @@ export default function LoginPage() {
               <a href="#" className="text-[13px] text-[#335cff]">Forgot password?</a>
             </div>
             <button className="w-full rounded-[10px] bg-[#335cff] text-white text-[14px] font-medium px-[14px] py-[10px] shadow-sm">Login</button>
-            <p className="text-[13px] text-[#525866]">Don't have an account? <Link className="text-[#335cff]" href="/create-account">Create Account</Link></p>
+            <p className="text-[13px] text-[#525866]">Don&apos;t have an account? <Link className="text-[#335cff]" href="/create-account">Create Account</Link></p>
           </form>
         </div>
       </section>

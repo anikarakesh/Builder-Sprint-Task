@@ -67,7 +67,9 @@ export default function ContentTable({
       return n;
     };
     const sorted = [...res].sort((a, b) => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       let av: number | string = a[sortKey] as any;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       let bv: number | string = b[sortKey] as any;
       if (sortKey !== "name") {
         av = toNumber(String(av));

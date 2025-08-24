@@ -21,6 +21,14 @@
 ## August 24, 2025
 
 - **12:18 pm** – Started working on imporvements.
+- **1:12 pm** – Completed the improvements.
+
+Total Time
+
+session1: 12:08 am - 1:10 am = 1h 2m
+session2: 7:55 am - 8:39 am = 44m
+session3: 12:08 pm - 12:40 pm = 22m
+session4: 12:12 pm - 1:12 pm = 1h
 
 
 ---
