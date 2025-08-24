@@ -30,11 +30,14 @@ I am not interested in building UI, more focused on the backend and LLM integrat
 
 Total Time
 
-session1: 12:08 am - 1:10 am = 1h 2m
-session2: 7:55 am - 8:39 am = 44m
-session3: 12:08 pm - 12:40 pm = 22m
-session4: 12:12 pm - 1:12 pm = 1h
+| Session   | Start Time | End Time   | Duration |
+|-----------|------------|------------|----------|
+| session1  | 12:08 am   | 1:10 am    | 1h 2m    |
+| session2  | 7:55 am    | 8:39 am    | 44m      |
+| session3  | 12:08 pm   | 12:40 pm   | 22m      |
+| session4  | 12:12 pm   | 1:12 pm    | 1h       |
 
+**Total time:** 3h 8m
 
 ---
 # Project Details
